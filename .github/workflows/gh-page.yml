@@ -1,4 +1,4 @@
-name: gh-page
+name: Generate static site and deploy it to GitHub Pages
 
 on:
     push:
