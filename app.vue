@@ -11,7 +11,7 @@
                         --un-scale-y: 1.1;
                         --un-scale-z: 1.1;
                     "
-                    v-for="(route, index) of routes">
+                    v-for="route of routes">
                     <nuxt-link
                         class="decoration-none"
                         :to="route.path"

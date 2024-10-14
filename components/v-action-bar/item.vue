@@ -2,7 +2,7 @@
     <div
         class="h-100% rounded-3 overflow-hidden transition-all-167 cursor-pointer"
         @click="emit('click')">
-        <slot></slot>
+        <slot>放点东西进来</slot>
     </div>
 </template>
 
