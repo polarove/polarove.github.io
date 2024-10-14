@@ -1,4 +1,4 @@
-<template>ad</template>
+<template>components</template>
 
 <script lang="ts" setup></script>
 
