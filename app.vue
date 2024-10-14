@@ -1,8 +1,8 @@
 <template>
     <nuxt-page />
-    <transition name="fade">
-        <client-only>
-            <v-action-bar>
+    <teleport to="body">
+        <transition name="fade">
+            <v-action-bar v-show="visible">
                 <v-action-bar-item
                     class="mx-4 hover:transform"
                     style="
@@ -15,6 +15,7 @@
                     <nuxt-link
                         class="decoration-none"
                         :to="route.path"
+                        :prefetch="true"
                         :class="
                             route.path == $router.currentRoute.value.path
                                 ? 'color-$primary'
@@ -26,11 +27,13 @@
                     </nuxt-link>
                 </v-action-bar-item>
             </v-action-bar>
-        </client-only>
-    </transition>
+        </transition>
+    </teleport>
 </template>
 
 <script setup lang="ts">
+const visible = ref(false)
+setTimeout(() => (visible.value = true))
 const routes: {
     path: string
     name: string
@@ -62,10 +65,10 @@ const routes: {
 <style scoped>
 .fade-enter-active,
 .fade-leave-active {
-    transition: opacity 0.5s;
+    transition: transform 0.5s;
 }
-.fade-enter,
+.fade-enter-from,
 .fade-leave-to {
-    opacity: 0;
+    transform: translate3d(-50%, 100%, 0);
 }
 </style>
