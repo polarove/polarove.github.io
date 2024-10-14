@@ -1,29 +1,24 @@
 <template>
-  <div
-    class="w-72px h-72px rounded-3 overflow-hidden hover:transform transition-all-167 cursor-pointer"
-    @click="$emit('click')"
-    style="
-      --un-translate-y: -20%;
-      --un-scale-y: 1.2;
-      --un-scale-x: 1.2;
-      --un-scale-z: 1.2;
-    "
-  >
-    <slot></slot>
-  </div>
+    <div
+        class="h-100% rounded-3 overflow-hidden transition-all-167 cursor-pointer"
+        @click="emit('click')">
+        <slot></slot>
+    </div>
 </template>
 
 <script lang="ts" setup>
-import type { ActionBarItemProps } from "./types";
+import type { ActionBarItemProps } from './types'
 
 withDefaults(defineProps<ActionBarItemProps>(), {
-  icon: "",
-  text: "",
-  size: "",
-  href: "",
-  target: "_self",
-  disabled: false,
-});
-</script>
+    icon: '',
+    text: '',
+    size: '',
+    href: '',
+    target: '_self',
+    disabled: false
+})
 
-<style lang="scss" scoped></style>
+const emit = defineEmits<{
+    (e: 'click'): void
+}>()
+</script>
