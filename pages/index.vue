@@ -1,11 +1,15 @@
 <template>
-    <section class="flex flex-col items-center justify-center h-100vh">
-        <client-only>
-            <v-theme />
-            <p class="text-12">主题偏好： {{ $colorMode.preference }}</p>
-            <p class="text-12">颜色模式： {{ $colorMode.value }}</p>
-        </client-only>
-    </section>
+    <div class="min-h-100vh">
+        <section class="text-center self-center">
+            <h1>Hello</h1>
+            <h1>I am Polaris Liu</h1>
+        </section>
+        <section class="text-center">
+            <client-only>
+                <v-theme />
+            </client-only>
+        </section>
+    </div>
 </template>
 
 <script lang="ts" setup></script>
