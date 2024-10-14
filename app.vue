@@ -1,33 +1,38 @@
 <template>
     <nuxt-page />
     <teleport to="body">
-        <transition name="fade">
-            <v-action-bar v-show="visible">
-                <v-action-bar-item
-                    class="mx-4 hover:transform"
-                    style="
-                        --un-translate-y: -20%;
-                        --un-scale-x: 1.1;
-                        --un-scale-y: 1.1;
-                        --un-scale-z: 1.1;
-                    "
-                    v-for="route of routes">
-                    <nuxt-link
-                        class="decoration-none"
-                        :to="route.path"
-                        :prefetch="true"
-                        :class="
-                            route.path == $router.currentRoute.value.path
-                                ? 'color-$primary'
-                                : 'color-inherit'
-                        ">
-                        <Icon
-                            :name="route.icon"
-                            class="text-6xl h-100% vertical-middle" />
-                    </nuxt-link>
-                </v-action-bar-item>
-            </v-action-bar>
-        </transition>
+        <client-only>
+            <transition name="fade">
+                <v-action-bar
+                    v-show="visible"
+                    class="position-absolute bottom-0 left-50% transform"
+                    style="--un-translate-x: -50%">
+                    <v-action-bar-item
+                        class="mx-4 hover:transform"
+                        style="
+                            --un-translate-y: -20%;
+                            --un-scale-x: 1.1;
+                            --un-scale-y: 1.1;
+                            --un-scale-z: 1.1;
+                        "
+                        v-for="route of routes">
+                        <nuxt-link
+                            class="decoration-none"
+                            :to="route.path"
+                            :prefetch="true"
+                            :class="
+                                route.path == $router.currentRoute.value.path
+                                    ? 'color-$primary'
+                                    : 'color-inherit'
+                            ">
+                            <Icon
+                                :name="route.icon"
+                                class="text-6xl h-100% vertical-middle" />
+                        </nuxt-link>
+                    </v-action-bar-item>
+                </v-action-bar>
+            </transition>
+        </client-only>
     </teleport>
 </template>
 
@@ -65,10 +70,10 @@ const routes: {
 <style scoped>
 .fade-enter-active,
 .fade-leave-active {
-    transition: transform 0.5s;
+    transition: transform 456ms;
 }
 .fade-enter-from,
 .fade-leave-to {
-    transform: translate3d(-50%, 100%, 0);
+    transform: translate3d(-50%, 200%, 0);
 }
 </style>

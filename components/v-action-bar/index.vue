@@ -1,8 +1,7 @@
 <template>
     <div
         :class="`justify-${justify} items-${items}`"
-        class="bg-$card-color flex position-absolute h-67px mb-4 rounded-3 py-3 bottom-0 left-50% transform b-1 b-solid b-red"
-        style="--un-translate-x: -50%">
+        class="bg-$background-card flex h-67px mb-4 rounded-3 py-3 b-1 b-solid b-red">
         <slot></slot>
     </div>
 </template>
