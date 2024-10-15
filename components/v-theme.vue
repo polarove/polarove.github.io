@@ -1,6 +1,9 @@
 <template>
     <ul class="p-0">
-        <li v-for="(theme, index) of themes" class="inline-block mx-12">
+        <li
+            :key="index"
+            v-for="(theme, index) of themes"
+            class="inline-block mx-12">
             <Icon
                 :name="theme.icon"
                 class="text-8xl cursor-pointer hover:color-$primary"

@@ -14,7 +14,8 @@
                     --un-scale-y: 1.1;
                     --un-scale-z: 1.1;
                 "
-                v-for="route of routes">
+                v-for="(route, index) of routes"
+                :key="index">
                 <i18n-link
                     class="decoration-none color-inherit"
                     :to="route.path"
