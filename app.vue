@@ -1,42 +1,44 @@
 <template>
     <nuxt-page />
-    <teleport to="body">
-        <client-only>
-            <transition name="fade">
-                <v-action-bar
-                    v-show="visible"
-                    class="position-absolute bottom-0 left-50% transform"
-                    style="--un-translate-x: -50%">
-                    <v-action-bar-item
-                        class="mx-4 hover:transform"
-                        style="
-                            --un-translate-y: -20%;
-                            --un-scale-x: 1.1;
-                            --un-scale-y: 1.1;
-                            --un-scale-z: 1.1;
-                        "
-                        v-for="route of routes">
-                        <nuxt-link
-                            class="decoration-none"
-                            :to="route.path"
-                            :prefetch="true"
-                            :class="
-                                route.path == $router.currentRoute.value.path
-                                    ? 'color-$primary'
-                                    : 'color-inherit'
-                            ">
-                            <Icon
-                                :name="route.icon"
-                                class="text-6xl h-100% vertical-middle" />
-                        </nuxt-link>
-                    </v-action-bar-item>
-                </v-action-bar>
-            </transition>
-        </client-only>
-    </teleport>
+
+    <transition name="fade">
+        <v-action-bar
+            v-show="visible"
+            class="position-absolute bottom-0 left-50% transform"
+            style="--un-translate-x: -50%">
+            <v-action-bar-item
+                class="mx-4 hover:transform"
+                style="
+                    --un-translate-y: -20%;
+                    --un-scale-x: 1.1;
+                    --un-scale-y: 1.1;
+                    --un-scale-z: 1.1;
+                "
+                v-for="route of routes">
+                <nuxt-link
+                    class="decoration-none"
+                    :to="$localeRoute(route.path)"
+                    :prefetch="true"
+                    :class="
+                        route.path ==
+                        $router.currentRoute.value.path.replace(
+                            `/${$getLocale()}`,
+                            ''
+                        )
+                            ? 'color-$primary'
+                            : 'color-inherit'
+                    ">
+                    <Icon
+                        :name="route.icon"
+                        class="text-6xl h-100% vertical-middle" />
+                </nuxt-link>
+            </v-action-bar-item>
+        </v-action-bar>
+    </transition>
 </template>
 
 <script setup lang="ts">
+import { type RouteLocationNormalizedLoadedGeneric } from 'vue-router'
 const visible = ref(false)
 setTimeout(() => (visible.value = true))
 const routes: {
