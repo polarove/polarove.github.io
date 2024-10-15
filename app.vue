@@ -4,8 +4,11 @@
     <transition name="fade">
         <v-action-bar
             v-show="visible"
-            class="position-absolute bottom-0 left-50% transform"
-            style="--un-translate-x: -50%">
+            class="position-absolute bottom-0 left-50% transform shadow"
+            style="
+                --un-translate-x: -50%;
+                --un-shadow-color: rgba(0, 0, 0, 0.33);
+            ">
             <v-action-bar-item
                 class="mx-4 hover:transform"
                 style="

@@ -1,7 +1,7 @@
 <template>
     <div
         :class="`justify-${justify} items-${items}`"
-        class="bg-$background-card flex h-67px mb-4 rounded-3 py-3 b-1 b-solid b-red">
+        class="bg-$background-card flex h-67px mb-4 rounded-3 py-3">
         <slot></slot>
     </div>
 </template>

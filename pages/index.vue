@@ -1,18 +1,13 @@
 <template>
     <div
         class="ma-auto xl:mt-30vh lg:mt-25vh md:mt-20vh sm:mt-15vh xs:mt-10vh lt-xs:mt-10vh">
-        <transition-group name="fade-down" tag="section" class="text-center">
-            <h1
-                v-for="(key, index) of translateKeys"
-                :key="index"
-                :style="[{ 'transition-delay': `${index * 67}ms` }]"
-                v-show="visible">
+        <section class="text-center">
+            <h1 v-for="(key, index) of translateKeys" :key="index">
                 {{ $t(key) }}
             </h1>
-        </transition-group>
-        <transition-group name="fade-in" tag="section" class="text-center">
+        </section>
+        <section class="text-center">
             <Icon
-                v-show="visible"
                 v-for="(locale, index) of supportedLocale"
                 :key="index"
                 :name="locale.icon"
@@ -23,15 +18,13 @@
                         ? 'color-$primary'
                         : 'color-$inherit'
                 "></Icon>
-        </transition-group>
+        </section>
         <v-theme class="text-center" />
     </div>
 </template>
 
 <script lang="ts" setup>
 import { en_US, zh_CN } from '~/constants'
-const visible = ref(false)
-setTimeout(() => (visible.value = true))
 const supportedLocale = reactive([
     { ...zh_CN, icon: 'mdi:ideogram-chinese-japanese-korean-variant' },
     { ...en_US, icon: 'mdi:alphabetical-variant' }
