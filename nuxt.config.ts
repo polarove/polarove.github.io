@@ -1,3 +1,5 @@
+import { en_US, zh_CN } from './constants'
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
     compatibilityDate: '2024-04-03',
@@ -23,11 +25,8 @@ export default defineNuxtConfig({
         preference: 'system'
     },
     i18n: {
-        locales: [
-            { code: 'zh', iso: 'zh-CN', dir: 'ltr', displayName: '简体中文' },
-            { code: 'en', iso: 'en-US', dir: 'ltr', displayName: 'English' }
-        ],
-        defaultLocale: 'zh',
+        locales: [zh_CN, en_US],
+        defaultLocale: zh_CN.code,
         translationDir: 'locales',
         meta: true
     }

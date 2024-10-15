@@ -15,23 +15,15 @@
                     --un-scale-z: 1.1;
                 "
                 v-for="route of routes">
-                <nuxt-link
-                    class="decoration-none"
-                    :to="$localeRoute(route.path)"
-                    :prefetch="true"
-                    :class="
-                        route.path ==
-                        $router.currentRoute.value.path.replace(
-                            `/${$getLocale()}`,
-                            ''
-                        )
-                            ? 'color-$primary'
-                            : 'color-inherit'
-                    ">
+                <i18n-link
+                    class="decoration-none color-inherit"
+                    :to="route.path"
+                    activeClass="color-$primary!"
+                    :prefetch="true">
                     <Icon
                         :name="route.icon"
                         class="text-6xl h-100% vertical-middle" />
-                </nuxt-link>
+                </i18n-link>
             </v-action-bar-item>
         </v-action-bar>
     </transition>
