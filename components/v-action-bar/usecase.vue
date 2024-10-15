@@ -1,25 +1,27 @@
 <template>
-    <transition-group name="fade" tag="ul" class="p-0 position-relative">
-        <li
-            :key="index"
+    <v-action-bar
+        v-show="visible"
+        class="position-absolute bottom-0 left-50% transform shadow"
+        style="--un-translate-x: -50%; --un-shadow-color: rgba(0, 0, 0, 0.33)">
+        <v-action-bar-item
+            class="mx-4"
             v-for="(theme, index) of themes"
-            v-show="visible"
-            class="inline-block mx-12 lt-sm:my-6"
-            :style="[{ 'transition-delay': `${index * 67}ms` }]">
+            :key="index">
             <Icon
                 :name="theme.icon"
-                class="text-8xl cursor-pointer hover:color-$primary"
+                class="text-6xl cursor-pointer hover:color-$primary"
                 :class="{
                     'color-$primary': $colorMode.preference === theme.name
                 }"
                 @click="$colorMode.preference = theme.name" />
-        </li>
-    </transition-group>
+        </v-action-bar-item>
+    </v-action-bar>
 </template>
 
 <script lang="ts" setup>
 const visible = ref(false)
 setTimeout(() => (visible.value = true))
+
 const themes = reactive<{ name: string; icon: string }[]>([
     {
         name: 'light',
@@ -43,13 +45,10 @@ const themes = reactive<{ name: string; icon: string }[]>([
 <style scoped>
 .fade-enter-active,
 .fade-leave-active {
-    transition:
-        transform 456ms,
-        opacity 456ms;
+    transition: transform 456ms;
 }
 .fade-enter-from,
 .fade-leave-to {
-    opacity: 0;
-    transform: translateY(50%);
+    transform: translate3d(-50%, 200%, 0);
 }
 </style>

@@ -2,11 +2,6 @@
     <div
         class="ma-auto xl:mt-30vh lg:mt-25vh md:mt-20vh sm:mt-15vh xs:mt-10vh lt-xs:mt-10vh">
         <section class="text-center">
-            <h1 v-for="(key, index) of translateKeys" :key="index">
-                {{ $t(key) }}
-            </h1>
-        </section>
-        <section class="text-center">
             <Icon
                 v-for="(locale, index) of supportedLocale"
                 :key="index"
@@ -19,7 +14,8 @@
                         : 'color-$inherit'
                 "></Icon>
         </section>
-        <v-theme class="text-center" />
+        <h1 class="text-center my-12">{{ $t('welcome') }}</h1>
+        <v-route class="text-center" />
     </div>
 </template>
 
@@ -29,7 +25,6 @@ const supportedLocale = reactive([
     { ...zh_CN, icon: 'mdi:ideogram-chinese-japanese-korean-variant' },
     { ...en_US, icon: 'mdi:alphabetical-variant' }
 ])
-const translateKeys = reactive(['hello', 'whoami'])
 </script>
 
 <style scoped>
