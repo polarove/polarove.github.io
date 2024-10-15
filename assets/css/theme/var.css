@@ -1,6 +1,8 @@
 :root {
     color-scheme: only light;
+    font-family: MiSans;
 }
+
 
 /* 监听操作系统主题模式 */
 @media (prefers-color-scheme: dark) {
