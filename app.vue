@@ -30,7 +30,6 @@
 </template>
 
 <script setup lang="ts">
-import { type RouteLocationNormalizedLoadedGeneric } from 'vue-router'
 const visible = ref(false)
 setTimeout(() => (visible.value = true))
 const routes: {
