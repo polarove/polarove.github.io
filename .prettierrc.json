@@ -3,5 +3,6 @@
     "trailingComma": "none",
     "tabWidth": 4,
     "bracketSameLine": true,
-    "singleQuote": true
+    "singleQuote": true,
+    "singleAttributePerLine": true
 }

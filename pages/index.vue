@@ -1,9 +1,30 @@
 <template>
     <section
         class="ma-auto xl:mt-30vh lg:mt-25vh md:mt-20vh sm:mt-15vh xs:mt-10vh lt-xs:mt-10vh text-center">
-        <v-locale />
+        <v-locale
+            style="
+                --text-xl: 4rem;
+                --text-lg: 3.5rem;
+                --text-md: 3.25rem;
+                --text-sm: 3rem;
+                --text-lt-sm: 2.75rem;
+            " />
         <h1 class="text-center my-12">{{ $t('welcome') }}</h1>
-        <v-route :routes="routes"> </v-route>
+        <v-route
+            :routes="routes"
+            style="
+                --text-xl: 1.5rem;
+                --text-lg: 1.4rem;
+                --text-md: 1.3rem;
+                --text-sm: 1.2rem;
+                --text-lt-sm: 1.1rem;
+                --icon-xl: 3rem;
+                --icon-lg: 2.75rem;
+                --icon-md: 2.5rem;
+                --icon-sm: 2.25rem;
+                --icon-lt-sm: 2rem;
+            ">
+        </v-route>
     </section>
 </template>
 

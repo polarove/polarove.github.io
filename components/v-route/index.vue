@@ -1,5 +1,8 @@
 <template>
-    <transition-group name="fade" tag="ul" class="p-0 position-relative">
+    <transition-group
+        name="fade"
+        tag="ul"
+        class="p-0 position-relative">
         <li
             class="inline-block mx-12 lt-sm:my-6 text-center"
             v-show="visible"
@@ -12,8 +15,13 @@
                 activeClass="color-$primary!"
                 :to="route.path"
                 :prefetch="true">
-                <Icon :name="route.icon" class="text-6xl vertical-middle" />
-                <div class="text-2xl">{{ $t(route.translateKey) }}</div>
+                <Icon
+                    :name="route.icon"
+                    class="vertical-middle xl:text-size-$icon-xl lg:text-size-$icon-lg md:text-size-$icon-md sm:text-size-$icon-sm lt-sm:text-size-$icon-lt-sm" />
+                <div
+                    class="xl:text-size-$text-xl lg:text-size-$text-lg md:text-size-$text-md sm:text-size-$text-sm lt-sm:text-size-$text-lt-sm">
+                    {{ $t(route.translateKey) }}
+                </div>
             </i18n-link>
         </li>
     </transition-group>

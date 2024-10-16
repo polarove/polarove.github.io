@@ -6,7 +6,7 @@
             :key="index">
             <Icon
                 :name="theme.icon"
-                class="text-6xl cursor-pointer hover:color-$primary"
+                class="xl:text-6xl lg:text-5xl md:text-4xl sm:text-3xl xs:text-2xl lt-xs:text-xl cursor-pointer hover:color-$primary"
                 :class="{
                     'color-$primary': $colorMode.preference === theme.name
                 }"
