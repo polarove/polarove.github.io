@@ -1,6 +1,12 @@
 <template>
     <v-layout :routes="routes">
-        <main class="mt-24 px-7">文章</main>
+        <main class="mt-24 px-7">
+            <content-doc>
+                <template #not-found>
+                    <div class="text-center">No documents found</div>
+                </template>
+            </content-doc>
+        </main>
     </v-layout>
 </template>
 

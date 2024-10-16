@@ -16,7 +16,8 @@ export default defineNuxtConfig({
         '@nuxt/icon',
         '@unocss/nuxt',
         '@nuxtjs/color-mode',
-        'nuxt-i18n-micro'
+        'nuxt-i18n-micro',
+        '@nuxt/content'
     ],
     colorMode: {
         classSuffix: '',
