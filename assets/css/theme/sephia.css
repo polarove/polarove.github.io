@@ -1,7 +1,7 @@
 .sephia {
     --primary: #15af7c;
-    --background-page: #dddfd2;
-    --background-page-light: #ebebd8;
+    --background-page: #e9eae7;
+    --background-page-light: #e9eae7;
     --background-card: var(--background-page-light);
     --text-primary: #505050;
 }

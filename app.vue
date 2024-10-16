@@ -2,17 +2,17 @@
     <nuxt-page />
 
     <div
-        class="position-absolute bottom-0 left-50% transform flex"
+        class="position-fixed bottom-0 left-50% transform flex"
         style="--un-translate-x: -50%; --un-translate-y: -20%">
         <transition name="fade">
             <v-action-bar-theme
                 v-show="visible"
-                class="mx-4 grid-cols-4 grid" />
+                class="mx-4 flex lg:py-1 lt-sm:py-2" />
         </transition>
 
         <transition name="fade">
             <v-action-bar-locale
-                class="mx-4"
+                class="mx-4 lg:py-1 flex items-center"
                 v-show="!localeActionBarVisible && visible" />
         </transition>
     </div>

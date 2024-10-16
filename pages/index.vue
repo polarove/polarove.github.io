@@ -1,18 +1,24 @@
 <template>
     <section
         class="ma-auto xl:mt-30vh lg:mt-25vh md:mt-20vh sm:mt-15vh xs:mt-10vh lt-xs:mt-10vh text-center">
-        <v-locale
+        <div
             style="
                 --text-xl: 4rem;
                 --text-lg: 3.5rem;
                 --text-md: 3.25rem;
                 --text-sm: 3rem;
                 --text-lt-sm: 2.75rem;
-            " />
-        <h1 class="text-center my-12">{{ $t('welcome') }}</h1>
+            ">
+            <v-locale />
+        </div>
+        <h1 class="text-center my-12">
+            {{ $t('welcome', { name: $t('name') as string }) }}
+        </h1>
         <v-route
             :routes="routes"
             style="
+                --px: 2.5rem;
+                --py: 0.5rem;
                 --text-xl: 1.5rem;
                 --text-lg: 1.4rem;
                 --text-md: 1.3rem;

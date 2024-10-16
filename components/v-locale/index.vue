@@ -1,17 +1,13 @@
 <template>
-    <div>
-        <Icon
-            v-for="(locale, index) of supportedLocale"
-            :key="index"
-            :name="locale.icon"
-            class="cursor-pointer hover:color-$primary xl:text-size-$text-xl lg:text-size-$text-lg md:text-size-$text-md sm:text-size-$text-sm lt-sm:text-size-$text-lt-sm"
-            @click="$switchLocale(locale.code)"
-            :class="
-                $getLocale() === locale.code
-                    ? 'color-$primary'
-                    : 'color-$inherit'
-            "></Icon>
-    </div>
+    <Icon
+        v-for="(locale, index) of supportedLocale"
+        :key="index"
+        :name="locale.icon"
+        class="cursor-pointer hover:color-$primary xl:text-size-$text-xl lg:text-size-$text-lg md:text-size-$text-md sm:text-size-$text-sm lt-sm:text-size-$text-lt-sm"
+        @click="$switchLocale(locale.code)"
+        :class="
+            $getLocale() === locale.code ? 'color-$primary' : 'color-$inherit'
+        "></Icon>
 </template>
 
 <script lang="ts" setup>

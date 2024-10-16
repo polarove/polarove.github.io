@@ -1,14 +1,15 @@
 <template>
     <v-action-bar>
-        <v-action-bar-item class="mx-4">
-            <v-locale
-                style="
-                    --text-xl: 4rem;
-                    --text-lg: 3.5rem;
-                    --text-md: 3rem;
-                    --text-sm: 2rem;
-                    --text-lt-sm: 1.5rem;
-                " />
+        <v-action-bar-item
+            class="mx-4"
+            style="
+                --text-xl: 3rem;
+                --text-lg: 2.75rem;
+                --text-md: 2.5rem;
+                --text-sm: 2.25rem;
+                --text-lt-sm: 2.25rem;
+            ">
+            <v-locale />
         </v-action-bar-item>
     </v-action-bar>
 </template>
