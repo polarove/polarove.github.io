@@ -7,12 +7,12 @@
         <transition name="fade">
             <v-action-bar-theme
                 v-show="visible && scroll < THRESHOLD"
-                class="mx-2 flex lg:py-1 lt-sm:py-2" />
+                class="py-1 mx-2 flex" />
         </transition>
 
         <transition name="fade">
             <v-action-bar-locale
-                class="mx-2 lg:py-1 flex items-center"
+                class="py-1 mx-2 flex items-center"
                 style="transition-delay: 67ms"
                 v-show="!IsIndexPage && visible && scroll < THRESHOLD" />
         </transition>
