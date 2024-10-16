@@ -7,6 +7,11 @@
 </template>
 
 <script lang="ts" setup>
+const { t } = useI18n()
+useSeoMeta({
+    title: t('title', { name: t('name') as string }) as string,
+    description: t('description') as string
+})
 const routes = [
     {
         path: '/',

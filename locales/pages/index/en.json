@@ -1,3 +1,5 @@
 {
-    "welcome": "Hello, I am {name}"
+    "welcome": "Hello, I am {name}",
+    "title": "Home | {name}",
+    "description": "A person who knows nothing."
 }
