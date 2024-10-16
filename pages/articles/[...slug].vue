@@ -1,6 +1,6 @@
 <template>
     <v-layout :routes="routes">
-        <main class="mt-24 px-7">
+        <main class="p-24 w-45vw ma-auto">
             <content-doc>
                 <template #not-found>
                     <div class="text-center">No documents found</div>

@@ -1,6 +1,9 @@
 <template>
     <v-layout :routes="routes">
-        <main class="mt-24 px-7">文章</main>
+        <main class="p-24 w-45vw ma-auto">
+            <div>hi</div>
+            <v-button>press me</v-button>
+        </main>
     </v-layout>
 </template>
 
