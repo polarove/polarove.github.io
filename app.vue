@@ -6,14 +6,15 @@
         style="--un-translate-x: -50%; --un-translate-y: -20%">
         <transition name="fade">
             <v-action-bar-theme
-                v-show="visible"
+                v-show="visible && scroll < THRESHOLD"
                 class="mx-2 flex lg:py-1 lt-sm:py-2" />
         </transition>
 
         <transition name="fade">
             <v-action-bar-locale
                 class="mx-2 lg:py-1 flex items-center"
-                v-show="!localeActionBarVisible && visible" />
+                style="transition-delay: 67ms"
+                v-show="!IsIndexPage && visible && scroll < THRESHOLD" />
         </transition>
     </div>
 </template>
@@ -21,14 +22,15 @@
 <script setup lang="ts">
 const visible = ref(false)
 setTimeout(() => (visible.value = true))
-
+const THRESHOLD = 64
 const { localePath, getLocale } = useI18n()
 const router = useRouter()
-const localeActionBarVisible = computed(
+const IsIndexPage = computed(
     () =>
         localePath('/') == router.currentRoute.value.path.concat(getLocale()) ||
         localePath('/') == router.currentRoute.value.path
 )
+const { scroll } = useWindowScroll()
 </script>
 
 <style scoped>
