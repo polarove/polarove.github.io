@@ -4076,10 +4076,10 @@ nuxi@^3.13.2:
   resolved "https://registry.yarnpkg.com/nuxi/-/nuxi-3.14.0.tgz#697a1e8b4f0d92fb8b30aa355af9295fa8c2cb4e"
   integrity sha512-MhG4QR6D95jQxhnwKfdKXulZ8Yqy1nbpwbotbxY5IcabOzpEeTB8hYn2BFkmYdMUB0no81qpv2ldZmVCT9UsnQ==
 
-nuxt-i18n-micro@^1.22.1:
-  version "1.22.1"
-  resolved "https://registry.yarnpkg.com/nuxt-i18n-micro/-/nuxt-i18n-micro-1.22.1.tgz#5bbd8e02707b25d255e0d1ca57c9c31a897ac379"
-  integrity sha512-s2KzfBswzkgj6sPnMopAV3RUS/vRn/pXk1rKTocMIvVWW0NYFUy4ULD6xUEbLtngTvOgpX8EquTQ3pVRgxQj8g==
+nuxt-i18n-micro@^1.23.1:
+  version "1.23.1"
+  resolved "https://registry.yarnpkg.com/nuxt-i18n-micro/-/nuxt-i18n-micro-1.23.1.tgz#0305c2edba83d5f3a55db8771f503b28e0ff9168"
+  integrity sha512-EH9cQ/GboF2XRlldsyEa97Enl5TZZ78MU7Yrin3jc9SrVlnZahdgY1c4jhhVhRhHEpskc/E5b63+xiDr9xAUKw==
   dependencies:
     "@nuxt/devtools-kit" "^1.4.2"
     "@nuxt/kit" "^3.13.1"
@@ -4090,7 +4090,7 @@ nuxt-i18n-micro@^1.22.1:
     "@rollup/rollup-linux-x64-gnu" "^4.9.6"
     "@rollup/rollup-win32-x64-msvc" "^4.9.6"
 
-nuxt@^3.13.0:
+nuxt@^3.13.2:
   version "3.13.2"
   resolved "https://registry.yarnpkg.com/nuxt/-/nuxt-3.13.2.tgz#af43a1fb5ccaaf98be0aaeca1bee504eeee24135"
   integrity sha512-Bjc2qRsipfBhjXsBEJCN+EUAukhdgFv/KoIR5HFB2hZOYRSqXBod3oWQs78k3ja1nlIhAEdBG533898KJxUtJw==
