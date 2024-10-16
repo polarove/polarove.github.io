@@ -1,4 +1,5 @@
 {
     "home": "Home",
-    "title": "Resume | {name}"
+    "title": "Resume | {name}",
+    "description": "A person who knows nothing."
 }

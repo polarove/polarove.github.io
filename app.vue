@@ -7,12 +7,12 @@
         <transition name="fade">
             <v-action-bar-theme
                 v-show="visible"
-                class="mx-4 flex lg:py-1 lt-sm:py-2" />
+                class="mx-2 flex lg:py-1 lt-sm:py-2" />
         </transition>
 
         <transition name="fade">
             <v-action-bar-locale
-                class="mx-4 lg:py-1 flex items-center"
+                class="mx-2 lg:py-1 flex items-center"
                 v-show="!localeActionBarVisible && visible" />
         </transition>
     </div>

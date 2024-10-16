@@ -5,5 +5,5 @@ export const useWindowScroll = () => {
             scroll.value = window.scrollY
         })
     })
-    return scroll
+    return { scroll }
 }
