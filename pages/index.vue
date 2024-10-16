@@ -113,9 +113,9 @@ const handleClick = (index: number) => {
     visible.value = false
 
     function toggle() {
-        if (routes[index].translateKey === 'mbti')
-            routes[index].translateKey = 'wpti'
-        else routes[index].translateKey = 'mbti'
+        if (routes[index].translateKey === ex[0])
+            routes[index].translateKey = ex[1]
+        else routes[index].translateKey = ex[0]
         visible.value = true
     }
 
