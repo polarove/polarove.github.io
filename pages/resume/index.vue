@@ -1,14 +1,6 @@
 <template>
     <div>
-        <v-route
-            :routes="routes"
-            style="
-                --icon-xl: 2rem;
-                --icon-lg: 1.75rem;
-                --icon-md: 1.5rem;
-                --icon-sm: 1.25rem;
-                --icon-lt-sm: 1rem;
-            " />
+        <v-route :routes="routes" />
     </div>
 </template>
 

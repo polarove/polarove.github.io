@@ -2,6 +2,13 @@
     <transition-group
         name="fade"
         tag="ul"
+        style="
+            --icon-xl: 2rem;
+            --icon-lg: 1.75rem;
+            --icon-md: 1.5rem;
+            --icon-sm: 1.25rem;
+            --icon-lt-sm: 1rem;
+        "
         class="p-0 position-relative">
         <li
             class="inline-block mx-12 lt-sm:my-6 text-center"
