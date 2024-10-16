@@ -31,12 +31,62 @@
                 --icon-sm: 2.25rem;
                 --icon-lt-sm: 2rem;
             ">
+            <template #link="{ prop }">
+                <i18n-link
+                    v-if="prop.index === mbti"
+                    @click="handleClick(prop.index)"
+                    class="decoration-none color-inherit hover:color-$primary"
+                    :aria-label="$t(prop.route.translateKey)"
+                    activeClass="color-$primary!"
+                    :to="prop.route.path"
+                    :prefetch="true">
+                    <transition
+                        :name="
+                            prop.route.translateKey === ex[0]
+                                ? 'fade-up'
+                                : 'fade-down'
+                        ">
+                        <Icon
+                            v-show="visible"
+                            :name="prop.route.icon"
+                            :style="[
+                                prop.route.translateKey === ex[0]
+                                    ? 'transition-delay: 0ms'
+                                    : 'transition-delay: 67ms'
+                            ]"
+                            class="vertical-middle xl:text-size-$icon-xl lg:text-size-$icon-lg md:text-size-$icon-md sm:text-size-$icon-sm lt-sm:text-size-$icon-lt-sm" />
+                    </transition>
+                    <transition
+                        :name="
+                            prop.route.translateKey === ex[0]
+                                ? 'fade-up'
+                                : 'fade-down'
+                        ">
+                        <div
+                            v-show="visible"
+                            :style="[
+                                prop.route.translateKey === ex[0]
+                                    ? 'transition-delay: 67ms'
+                                    : 'transition-delay: 0ms'
+                            ]"
+                            class="mt-1 xl:text-size-$text-xl lg:text-size-$text-lg md:text-size-$text-md sm:text-size-$text-sm lt-sm:text-size-$text-lt-sm">
+                            {{ $t(prop.route.translateKey) }}
+                        </div>
+                    </transition>
+                </i18n-link>
+            </template>
         </v-route>
     </section>
 </template>
 
 <script lang="ts" setup>
-const routes = [
+const visible = ref(true)
+const ex = ['mbti', 'wpti']
+
+const mbti = computed(() =>
+    routes.findIndex((obj) => ex.includes(obj['translateKey']))
+)
+const routes = reactive([
     {
         path: '/',
         translateKey: 'mbti',
@@ -57,28 +107,44 @@ const routes = [
         translateKey: 'article',
         icon: 'mdi:file-document-edit-outline'
     }
-]
+])
+
+const handleClick = (index: number) => {
+    visible.value = false
+
+    function toggle() {
+        if (routes[index].translateKey === 'mbti')
+            routes[index].translateKey = 'wpti'
+        else routes[index].translateKey = 'mbti'
+        visible.value = true
+    }
+
+    setTimeout(() => toggle(), 456)
+}
 </script>
 
 <style scoped>
-.fade-down-enter-active,
-.fade-down-leave-active {
+.fade-up-enter-active,
+.fade-up-leave-active {
     transition:
-        transform 777ms,
-        opacity 1s;
+        transform 456ms,
+        opacity 456ms;
 }
-.fade-down-enter-from,
-.fade-down-leave-to {
+.fade-up-enter-from,
+.fade-up-leave-to {
     opacity: 0;
     transform: translateY(-50%);
 }
 
-.fade-in-enter-active,
-.fade-in-leave-active {
-    transition: opacity 1s;
+.fade-down-enter-active,
+.fade-down-leave-active {
+    transition:
+        opacity 456ms,
+        transform 456ms;
 }
-.fade-in-enter-from,
-.fade-in-leave-to {
+.fade-down-enter-from,
+.fade-down-leave-to {
     opacity: 0;
+    transform: translateY(50%);
 }
 </style>
