@@ -1,30 +1,35 @@
 <template>
-    <div
-        class="ma-auto xl:mt-30vh lg:mt-25vh md:mt-20vh sm:mt-15vh xs:mt-10vh lt-xs:mt-10vh">
-        <section class="text-center">
-            <Icon
-                v-for="(locale, index) of supportedLocale"
-                :key="index"
-                :name="locale.icon"
-                class="text-6xl cursor-pointer hover:color-$primary"
-                @click="$switchLocale(locale.code)"
-                :class="
-                    $getLocale() === locale.code
-                        ? 'color-$primary'
-                        : 'color-$inherit'
-                "></Icon>
-        </section>
+    <section
+        class="ma-auto xl:mt-30vh lg:mt-25vh md:mt-20vh sm:mt-15vh xs:mt-10vh lt-xs:mt-10vh text-center">
+        <v-locale />
         <h1 class="text-center my-12">{{ $t('welcome') }}</h1>
-        <v-route class="text-center" />
-    </div>
+        <v-route :routes="routes"> </v-route>
+    </section>
 </template>
 
 <script lang="ts" setup>
-import { en_US, zh_CN } from '~/constants'
-const supportedLocale = reactive([
-    { ...zh_CN, icon: 'mdi:ideogram-chinese-japanese-korean-variant' },
-    { ...en_US, icon: 'mdi:alphabetical-variant' }
-])
+const routes = [
+    {
+        path: '/',
+        translateKey: 'mbti',
+        icon: 'mdi:zodiac-scorpio'
+    },
+    {
+        path: '/resume',
+        translateKey: 'resume',
+        icon: 'mdi:script-text'
+    },
+    {
+        path: '/projects',
+        translateKey: 'project',
+        icon: 'mdi:file-code-outline'
+    },
+    {
+        path: '/articles',
+        translateKey: 'article',
+        icon: 'mdi:file-document-edit-outline'
+    }
+]
 </script>
 
 <style scoped>

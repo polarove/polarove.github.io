@@ -1,6 +1,6 @@
 <template>
     <div
-        class="h-100% rounded-3 overflow-hidden cursor-pointer"
+        class="h-100% overflow-hidden cursor-pointer inline-block"
         @click="emit('click')">
         <slot>放点东西进来</slot>
     </div>

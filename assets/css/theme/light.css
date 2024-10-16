@@ -1,5 +1,7 @@
 .light {
     --primary: #309b77;
-    --background-page: #effeff;
-    --text-primary: #303030;
+    --background-page: #f5f7f8;
+    --background-page-light: #f0f0f0;
+    --background-card: var(--background-page-light);
+    --text-primary: #404040;
 }

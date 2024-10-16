@@ -1,6 +1,7 @@
 .dark {
     --primary: #05a570;
     --background-page: #303030;
-    --background-color: #212121;
-    --text-primary: #effeff;
+    --background-page-light: #363636;
+    --background-card: var(--background-page-light);
+    --text-primary: #dadada;
 }

@@ -1,8 +1,5 @@
 <template>
-    <v-action-bar
-        v-show="visible"
-        class="position-absolute bottom-0 left-50% transform shadow"
-        style="--un-translate-x: -50%; --un-shadow-color: rgba(0, 0, 0, 0.33)">
+    <v-action-bar>
         <v-action-bar-item
             class="mx-4"
             v-for="(theme, index) of themes"
@@ -19,10 +16,7 @@
 </template>
 
 <script lang="ts" setup>
-const visible = ref(false)
-setTimeout(() => (visible.value = true))
-
-const themes = reactive<{ name: string; icon: string }[]>([
+const themes = [
     {
         name: 'light',
         icon: 'mdi:white-balance-sunny'
@@ -39,16 +33,5 @@ const themes = reactive<{ name: string; icon: string }[]>([
         name: 'system',
         icon: 'mdi:monitor'
     }
-])
+]
 </script>
-
-<style scoped>
-.fade-enter-active,
-.fade-leave-active {
-    transition: transform 456ms;
-}
-.fade-enter-from,
-.fade-leave-to {
-    transform: translate3d(-50%, 200%, 0);
-}
-</style>
