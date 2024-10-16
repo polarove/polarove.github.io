@@ -4,7 +4,7 @@
         tag="ul"
         class="p-0">
         <li
-            class="inline-block text-center px-$px py-$py"
+            class="inline-block text-center sm:px-$px-sm py-$py"
             v-show="visible"
             :key="index"
             :style="[{ 'transition-delay': `${index * 67}ms` }]"

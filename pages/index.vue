@@ -16,8 +16,9 @@
         </h1>
         <v-route
             :routes="routes"
+            class="lt-sm:grid lt-sm:grid-cols-[2fr_2fr] lt-sm:gap-4"
             style="
-                --px: 2.5rem;
+                --px-sm: 2.5rem;
                 --py: 0.5rem;
                 --text-xl: 1.5rem;
                 --text-lg: 1.4rem;
