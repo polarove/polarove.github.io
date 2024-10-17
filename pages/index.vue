@@ -88,16 +88,16 @@
 </template>
 
 <script lang="ts" setup>
-const { t } = useI18n()
+const { ts } = useI18n()
 useSeoMeta({
-	title: t('title', { name: t('name') as string }) as string,
-	description: t('description') as string,
-	ogTitle: t('ogTitle') as string,
-	ogDescription: t('ogDescription') as string,
+	title: ts('title', { name: ts('name') }),
+	description: ts('description'),
+	ogTitle: ts('ogTitle'),
+	ogDescription: ts('ogDescription'),
 	ogImage: 'http://example.com/example.png',
 	ogUrl: 'http://example.com/',
-	twitterTitle: t('twitterTitle') as string,
-	twitterDescription: t('twitterDescription') as string,
+	twitterTitle: ts('twitterTitle'),
+	twitterDescription: ts('twitterDescription'),
 	twitterImage: 'http://example.com/example.png',
 	twitterCard: 'app'
 })

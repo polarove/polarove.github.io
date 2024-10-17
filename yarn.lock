@@ -5868,10 +5868,10 @@ normalize-range@^0.1.2:
   resolved "https://registry.yarnpkg.com/normalize-range/-/normalize-range-0.1.2.tgz#2d10c06bdfd312ea9777695a4d28439456b75942"
   integrity sha512-bdok/XvKII3nUpklnV6P2hxtMNrCboOjAcyBuQnWEhO665FwrSNRxU+AqpsyvO6LgGYPspN+lu5CLtw4jPRKNA==
 
-npm-check-updates@^17.1.3:
-  version "17.1.3"
-  resolved "https://registry.yarnpkg.com/npm-check-updates/-/npm-check-updates-17.1.3.tgz#7d7aefd073c95a2f29ccd1db9eea39e9f3be343a"
-  integrity sha512-4uDLBWPuDHT5KLieIJ20FoAB8yqJejmupI42wPyfObgQOBbPAikQSwT73afDwREvhuxYrRDqlRvxTMSfvO+L8A==
+npm-check-updates@^17.1.4:
+  version "17.1.4"
+  resolved "https://registry.yarnpkg.com/npm-check-updates/-/npm-check-updates-17.1.4.tgz#1bebfb7a32a92c0d98f6ed6cf780b8841d787077"
+  integrity sha512-crOUeN2GngqlkRCFQ/zi1zsneWd9IGZgIfAWYGAuhYiPnfbBTmJBL7Yq1wI0e1dsW8CfWc+h348WmfCREqeOBA==
 
 npm-run-path@^4.0.1:
   version "4.0.1"
@@ -5909,10 +5909,10 @@ nuxi@^3.13.2:
   resolved "https://registry.yarnpkg.com/nuxi/-/nuxi-3.14.0.tgz#697a1e8b4f0d92fb8b30aa355af9295fa8c2cb4e"
   integrity sha512-MhG4QR6D95jQxhnwKfdKXulZ8Yqy1nbpwbotbxY5IcabOzpEeTB8hYn2BFkmYdMUB0no81qpv2ldZmVCT9UsnQ==
 
-nuxt-i18n-micro@^1.24.0:
-  version "1.24.0"
-  resolved "https://registry.yarnpkg.com/nuxt-i18n-micro/-/nuxt-i18n-micro-1.24.0.tgz#c7d4592626196f6a4cb4aaf1c72fb377b18446b3"
-  integrity sha512-RlQwiQ9wxJQNVAtfoB8Mk2mLdHDJJJqrkIeOeAvuhp9E+6xh2/9Ge4Wgd/0EWkj6sB5kfxRxWjcAhLJek8mABw==
+nuxt-i18n-micro@^1.25.0:
+  version "1.25.0"
+  resolved "https://registry.yarnpkg.com/nuxt-i18n-micro/-/nuxt-i18n-micro-1.25.0.tgz#58b2b07e65666acdc4920454a02f26ae957b7af3"
+  integrity sha512-isi1Dl3UoOfGN5k5HjIfZU7Qpm5teh0u3pEpKIb3eTkyCqKtwUfKTbTr5mt4rgMkZ6NyJKsVoakhT1U7a+CF2w==
   dependencies:
     "@nuxt/devtools-kit" "^1.4.2"
     "@nuxt/kit" "^3.13.1"
