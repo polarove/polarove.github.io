@@ -1,5 +1,5 @@
 export interface IRoute {
-    path: string
-    translateKey: string
-    icon: string
+	path: string
+	translateKey: string
+	icon: string
 }

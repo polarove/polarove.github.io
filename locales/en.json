@@ -4,5 +4,6 @@
     "resume": "Resume",
     "project": "Projects",
     "article": "Articles",
-    "name": "Polarove"
+    "name": "Polarove",
+    "title": "@:name"
 }

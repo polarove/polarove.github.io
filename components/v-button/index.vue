@@ -1,5 +1,5 @@
 <template>
-    <button class="outline-none">
-        <slot>asd</slot>
-    </button>
+	<button class="outline-none">
+		<slot>asd</slot>
+	</button>
 </template>

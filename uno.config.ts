@@ -51,7 +51,7 @@ export default defineConfig({
 		// class="i-iconset:iconname"
 		presetIcons({
 			extraProperties: {
-				display: 'inline-block',
+				'display': 'inline-block',
 				'vertical-align': 'middle'
 			}
 		})

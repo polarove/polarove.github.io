@@ -4,5 +4,6 @@
     "resume": "简历",
     "project": "项目",
     "article": "随笔",
-    "name": "刘棋"
+    "name": "刘棋",
+    "title": "@:name"
 }
