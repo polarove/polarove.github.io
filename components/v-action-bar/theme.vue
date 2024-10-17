@@ -28,7 +28,7 @@ const themes = [
 		icon: 'mdi:weather-night'
 	},
 	{
-		name: 'sephia',
+		name: 'sepia',
 		icon: 'mdi:palette'
 	},
 	{

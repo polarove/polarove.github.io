@@ -1,13 +1,16 @@
-.dark {
+.sepia {
+    --un-sepia: sepia(20%) !important;
+
     --primary: #05a570;
     --background-page: #0d0a0a;
     --background-page-dark: rgb(0, 0, 0);
     --text-primary: #a4a4a4;
 
-    --background-header: var(--background-page);
     --background-card: var(--background-page);
+    --background-header: var(--background-page);
 
-    --shiki-dark-bg: var(--background-page);
+    --shiki-sepia-bg: var(--background-page);
     --shiki-dark: var(--text-primary);
+
 
 }

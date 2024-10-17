@@ -27,13 +27,25 @@ export default defineNuxtConfig({
 		'assets/css/theme/var.css',
 		'assets/css/theme/dark.css',
 		'assets/css/theme/light.css',
-		'assets/css/theme/sephia.css'
+		'assets/css/theme/sepia.css'
 	],
 	colorMode: {
 		classSuffix: '',
 		classPrefix: '',
 		fallback: 'system',
 		preference: 'system'
+	},
+	content: {
+		highlight: {
+			theme: {
+				// Default theme (same as single string)
+				default: 'github-light',
+				// Theme used if `html.dark`
+				dark: 'github-dark',
+				// Theme used if `html.sepia`
+				sepia: 'monokai'
+			}
+		}
 	},
 	compatibilityDate: '2024-04-03',
 	eslint: {

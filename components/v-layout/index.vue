@@ -1,7 +1,7 @@
 <template>
 	<v-route
 		:routes="routes"
-		class="fixed z-999 bg-[--background-page-light] top-0 flex items-center my-0 w-100vw lt-sm:justify-around"
+		class="fixed z-999 bg-[--background-header] top-0 flex items-center my-0 w-100vw lt-sm:justify-around"
 		:class="[scroll > shadowThreshold ? 'drop-shadow-md' : '']"
 		style="
             --py: 0.75rem;
