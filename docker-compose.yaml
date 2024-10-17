@@ -1,0 +1,9 @@
+services:
+  polarove.githubi.io:
+    image: polarove.githubi.io
+    container_name: polarove.githubi.io
+    ports:
+      - 3002:3000
+    build:
+      context: ./
+      dockerfile: Dockerfile
