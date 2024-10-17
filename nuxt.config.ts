@@ -30,7 +30,8 @@ export default defineNuxtConfig({
         defaultLocale: zh_CN.code,
         translationDir: 'locales',
         meta: true,
-        localeCookie: 'accept-language'
+        localeCookie: 'accept-language',
+        includeDefaultLocaleRoute: true
     },
     app: {
         head: {

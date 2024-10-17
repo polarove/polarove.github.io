@@ -15,7 +15,11 @@
                 <i18n-link
                     class="decoration-none color-inherit hover:color-$primary"
                     :aria-label="$t(route.translateKey)"
-                    activeClass="color-$primary!"
+                    :class="[
+                        $localePath(route.path) == $route.path
+                            ? 'color-$primary!'
+                            : ''
+                    ]"
                     :to="route.path"
                     :prefetch="true">
                     <slot
