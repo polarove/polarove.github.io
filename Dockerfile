@@ -25,4 +25,4 @@ WORKDIR /app
 # Copy built output from build stage
 COPY --from=build /app/.output . 
 
-CMD [ "node", "./.output/server/index.mjs" ]
+CMD [ "node", "./server/index.mjs" ]
