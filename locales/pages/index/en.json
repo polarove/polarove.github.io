@@ -1,5 +1,9 @@
 {
     "welcome": "Hello, I am {name}",
     "title": "Home | {name}",
-    "description": "A person who knows nothing."
+        "ogTitle": "Home | {name}",
+            "twitterTitle": "Home | {name}",
+    "description": "A person who knows nothing.",
+    "ogDescription": "A person who knows nothing.",
+    "twitterDescription": "A person who knows nothing."
 }

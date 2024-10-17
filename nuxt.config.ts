@@ -10,7 +10,7 @@ export default defineNuxtConfig({
 		'@nuxt/content',
 		'@nuxt/eslint'
 	],
-	devtools: { enabled: false },
+	devtools: { enabled: true },
 	app: {
 		head: {
 			link: [

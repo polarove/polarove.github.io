@@ -92,20 +92,17 @@ const { ts } = useI18n()
 useSeoMeta({
 	title: ts('title', { name: ts('name') }),
 	description: ts('description'),
-	ogTitle: ts('ogTitle'),
+	ogTitle: ts('ogTitle', { name: ts('name') }),
 	ogDescription: ts('ogDescription'),
-	ogImage: 'http://example.com/example.png',
-	ogUrl: 'http://example.com/',
-	twitterTitle: ts('twitterTitle'),
+	ogImage: 'https://avatars.githubusercontent.com/u/95893742?v=4',
+	ogUrl: 'https://polarove.github.io',
+	twitterTitle: ts('twitterTitle', { name: ts('name') }),
 	twitterDescription: ts('twitterDescription'),
-	twitterImage: 'http://example.com/example.png',
+	twitterImage: 'https://avatars.githubusercontent.com/u/95893742?v=4',
 	twitterCard: 'app'
 })
 
 useHead({
-	htmlAttrs: {
-		lang: 'en'
-	},
 	link: [
 		{
 			rel: 'icon',
