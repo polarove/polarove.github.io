@@ -1,0 +1,1 @@
+import{x as o,o as s,g as r,z as a}from"./CjVtsr3M.js";const c={},n={class:"bg-[--background-card] rounded-2 shadow-md b-2 b-[--background-page] b-solid px-4"};function t(e,d){return s(),r("section",n,[a(e.$slots,"default")])}const _=o(c,[["render",t]]);export{_ as default};
