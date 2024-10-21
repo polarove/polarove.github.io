@@ -24,4 +24,7 @@ type OverloadUnionRecursive<
         | ((...args: TArgs) => TReturn)
   : never
 ```
+
+#language
+typescript
 ::
