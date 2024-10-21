@@ -28,10 +28,6 @@ const themes = [
 		icon: 'mdi:weather-night'
 	},
 	{
-		name: 'sepia',
-		icon: 'mdi:palette'
-	},
-	{
 		name: 'system',
 		icon: 'mdi:monitor'
 	}

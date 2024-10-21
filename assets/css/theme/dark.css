@@ -1,16 +1,16 @@
 .dark {
     --primary: #05a570;
-    --background-page: #0d0a0a;
-    --background-page-dark: rgb(0, 0, 0);
+    --primary-light: #05a570cc;
+    --background-page: #333;
+    --background-page-dark: #232323;
     --text-primary: #a4a4a4;
+    --text-primary-light: #a4a4a4cc;
 
-    --background-header: var(--background-page);
-    --background-card: var(--background-page);
+    --background-card: var(--background-page-dark);
+    --text-card: var(--background-page);
+    --background-header: var(--background-page-dark);
 
     --shiki-dark-bg: var(--background-page);
     --shiki-dark: var(--text-primary);
 
-    img {
-        filter: grayscale(1) invert(1)
-    }
 }

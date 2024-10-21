@@ -26,8 +26,7 @@ export default defineNuxtConfig({
 		'assets/css/scrollbar.css',
 		'assets/css/theme/var.css',
 		'assets/css/theme/dark.css',
-		'assets/css/theme/light.css',
-		'assets/css/theme/sepia.css'
+		'assets/css/theme/light.css'
 	],
 	colorMode: {
 		classSuffix: '',
