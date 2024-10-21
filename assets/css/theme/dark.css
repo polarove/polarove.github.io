@@ -10,4 +10,7 @@
     --shiki-dark-bg: var(--background-page);
     --shiki-dark: var(--text-primary);
 
+    img {
+        filter: grayscale(1) invert(1)
+    }
 }
