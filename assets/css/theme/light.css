@@ -1,13 +1,11 @@
 .light {
     --primary: #15af7c;
+    --primary-light: #15af7cc9;
     --background-page: #f7f7f7;
     --background-page-dark: #efefef;
     --text-primary: #505050;
 
     --background-card: var(--background-page-dark);
     --background-header: var(--background-page-dark);
-
-    --shiki-default-bg: var(--background-page);
-    --shiki-default: var(--text-primary);
 
 }

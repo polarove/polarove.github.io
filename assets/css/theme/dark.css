@@ -1,13 +1,10 @@
 .dark {
     --primary: #05a570;
-    --background-page: #333;
+    --primary-light: #05a570c9;
+    --background-page: #333333;
     --background-page-dark: #232323;
     --text-primary: #a4a4a4;
 
     --background-card: var(--background-page-dark);
     --background-header: var(--background-page-dark);
-
-    --shiki-dark-bg: var(--background-page);
-    --shiki-dark: var(--text-primary);
-
 }

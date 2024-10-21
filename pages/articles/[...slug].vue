@@ -1,6 +1,11 @@
 <template>
 	<v-layout :routes="routes">
-		<main class="p-24 w-45vw ma-auto">
+		<v-card class="mt-24 p-12 ma-auto xl:w-45vw md:w-67vw sm:w-89vw lt-sm:w-89vw article-md">
+			<Icon
+				name="mdi:arrow-left-bold"
+				class="text-3xl hover:color-[--primary] cursor-pointer"
+				@click="$router.back()"
+			/>
 			<content-doc>
 				<template #not-found>
 					<div class="text-center">
@@ -8,7 +13,7 @@
 					</div>
 				</template>
 			</content-doc>
-		</main>
+		</v-card>
 	</v-layout>
 </template>
 
@@ -42,4 +47,17 @@ const routes = [
 ]
 </script>
 
-<style lang="scss" scoped></style>
+<style>
+.article-md {
+	a {
+		text-decoration: none;
+		color: var(--primary);
+		&:hover{
+			color: var(--primary-light);
+		}
+	}
+	li {
+		line-height: 2rem;
+	}
+}
+</style>

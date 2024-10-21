@@ -65,7 +65,7 @@
 					target="_blank"
 				>
 					<v-card
-						class="b-1 b-[--background-page] b-solid py-4 px-6 hover:b-[--primary] cursor-pointer"
+						class="b-solid py-4 px-6 hover:b-[--primary] cursor-pointer"
 					>
 						<Icon
 							name="mdi:web"
@@ -86,7 +86,7 @@
 				target="_blank"
 			>
 				<v-card
-					class="b-1 b-[--background-page] b-solid py-4 px-6 hover:b-[--primary] cursor-pointer"
+					class=" py-4 px-6 hover:b-[--primary] cursor-pointer"
 				>
 					<span> Swagger page </span>
 					<Icon name="mdi:arrow-top-right" />
@@ -121,7 +121,7 @@
 				>
 					<v-card
 						:class="[index != 0 && index!=exmapleProjects.length ? 'mx-4' : '']"
-						class="b-1 b-[--background-page] b-solid py-4 px-6 hover:b-[--primary] cursor-pointer"
+						class="py-4 px-6 hover:b-[--primary] cursor-pointer"
 					>
 						<Icon
 							name="mdi:github"
@@ -138,8 +138,8 @@
 			<v-card
 				v-for="experience, index of workExperiences"
 				:key="index"
-				:class="[experience.incumbency ? 'b-[--primary]' : 'b-[--background-page]']"
-				class="b-1 b-solid  py-4 px-6 hover:b-[--primary] cursor-pointer not-first:mt-4"
+				:class="[experience.incumbency ? 'b-[--primary]' : '']"
+				class="py-4 px-6 hover:b-[--primary] cursor-pointer not-first:mt-4"
 			>
 				<div class="grid grid-cols-[3fr_3fr_3fr] items-center">
 					<h2>
