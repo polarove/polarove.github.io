@@ -18,14 +18,14 @@
 /* 监听操作系统主题模式 */
 @media (prefers-color-scheme: dark) {
     body {
-        background-color: var(--background-page-dark);
+        background-color: var(--background-page);
         color: var(--text-primary);
     }
 }
 
 @media (prefers-color-scheme: light) {
     body {
-        background-color: var(--background-page-dark);
+        background-color: var(--background-page);
         color: var(--text-primary);
     }
 }

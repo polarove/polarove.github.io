@@ -64,6 +64,14 @@ export default defineNuxtConfig({
 		meta: true,
 		localeCookie: 'accept-language',
 		includeDefaultLocaleRoute: true
+	},
+	icon: {
+		customCollections: [
+			{
+				prefix: 'pv',
+				dir: './assets/icons'
+			}
+		]
 	}
 
 	// usage: https://unocss.dev/integrations/nuxt#configuration

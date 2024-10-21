@@ -1,5 +1,64 @@
 {
   "home": "Home",
   "title": "Resume | {name}",
-  "description": "A person who knows nothing."
+  "pdf": "Download PDF",
+  "description": "A person who knows nothing.",
+  "gender": "Male",
+  "age": {
+    "prefix": "Age: ",
+    "value": "{age} years old"
+  },
+  "major": {
+    "prefix": "Majority: ",
+    "value": "Infomation Management and Information System"
+  },
+  "education": {
+    "prefix": "Degree",
+    "value": "Bachelor on Management"
+  },
+  "native-place": {
+    "prefix": "\n",
+    "value": "China"
+  },
+  "political": {
+    "prefix": "\n",
+    "value": "Independent individual"
+  },
+  "email": {
+    "prefix": "Email",
+    "value": "liuqi6602@163.com"
+  },
+  "working": {
+    "prefix": "Work experience: ",
+    "value": "Participate in work since {year}"
+  },
+  "ability": {
+    "index": "Skill",
+    "project": {
+      "warframe-team": "Warframe team",
+      "fissure-clock": "Fissure clock App",
+      "yaoren": "Yaoren App",
+      "stylized": "Stylized"
+    },
+    "company": {
+      "renshu": "Talent Digital Development Co., Ltd, Fujian",
+      "tukun": "Tukun Technology Co., Ltd, Fujian"
+    },
+    "position": {
+      "Front-end-engineer": "Front-end Engineer",
+      "Java-engineer": "Java Engineer"
+    },
+    "p0": "[Language] Certificated CET-6, won several competitions during college and is able to use English as a working language.",
+    "p1": "[Tech] 2 years dev experience on vue/nuxt, knowns the fundamentals of it, and I have the ability to build SEO friendly, multi platform compatible, and interactive website pages based on design drafts.",
+    "p2": "[Tech] 2 years dev experience on Java & half year dev experience on .NET core for backend development.",
+    "p3": "[Tech] Have the knowledge about distributed system, service registration and discovery, remote call, traffic breaker, distributed lock, message queue, cache etc.",
+    "p4": "[Tech] Have basic knowledge of databases, such as transactions, rollback, table locking, query optimization, index optimization, and can use MySQL and redis.",
+    "p5": "[Tech] My backend development skills have made me very familiar with the RESTful API, thus I am able to efficiently cooperate with backend developers to solve problems.",
+    "p6": "[Tech] Proficient in using Docker for containerization testing of web projects and having knowledge of common continuous delivery platforms, such as",
+    "p7": {
+      "seg0": "[Tech] Have some understanding of cross platform mobile development, have used Flutter / uniapp in personal or previous company projects, and have learned Android native development",
+      "seg1": "To deepen understanding of cross platform development."
+    },
+    "p8": "[Footprints of open source] participating in open source community projects with passion and providing assistance to the best of my ability, I am currently maintaining the following projects."
+  }
 }
