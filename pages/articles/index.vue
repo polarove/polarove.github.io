@@ -1,6 +1,6 @@
 <template>
 	<v-layout :routes="routes">
-		<v-card class="mt-32 ma-auto xl:w-45vw md:w-67vw sm:w-82vw lt-sm:w-82vw">
+		<v-card class="mt-32 ma-auto xl:w-45vw md:w-67vw sm:w-82vw lt-sm:w-82vw p-12">
 			<div
 				v-for="(directory, index) of menu"
 				:key="index"
