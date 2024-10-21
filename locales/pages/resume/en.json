@@ -5,32 +5,26 @@
   "description": "A person who knows nothing.",
   "gender": "Male",
   "age": {
-    "prefix": "Age: ",
     "value": "{age} years old"
   },
   "major": {
-    "prefix": "Majority: ",
     "value": "Infomation Management and Information System"
   },
   "education": {
-    "prefix": "Degree",
     "value": "Bachelor on Management"
   },
   "native-place": {
-    "prefix": "\n",
     "value": "China"
   },
   "political": {
-    "prefix": "\n",
     "value": "Independent individual"
   },
   "email": {
-    "prefix": "Email",
     "value": "liuqi6602@163.com"
   },
   "working": {
-    "prefix": "Work experience: ",
-    "value": "Participate in work since {year}"
+    "time": "Participated in work since {year}",
+    "value": "（{value} years）"
   },
   "ability": {
     "index": "Skill",

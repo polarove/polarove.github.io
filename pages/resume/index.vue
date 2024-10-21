@@ -6,13 +6,14 @@
 			</h1>
 			<p class="text-center">
 				<span class="mx-1">{{ t('gender') }}</span>/
-				<span class="mx-1">{{ t('age.value', { age: calculateAge() }) }}</span>/
-				<span class="mx-1">{{ t('major.value', { age: calculateAge() }) }}</span>/
-				<span class="mx-1">{{ t('education.value', { age: calculateAge() }) }}</span>/
+				<span class="mx-1">{{ t('age.value', { age: calculateYear(BIRTHDAY) }) }}</span>/
+				<span class="mx-1">{{ t('major.value') }}</span>/
+				<span class="mx-1">{{ t('education.value') }}</span>/
 				<span class="mx-1">{{ t('political.value') }}</span>
 			</p>
 			<p class="text-center">
-				<span class="mx-1">{{ t('working.value', { year: '2023-07' }) }}</span>
+				<span class="mx-1">{{ t('working.time', { year: '2023-07' }) }}</span>
+				<span class="mx-1">{{ t('working.value', { value: calculateYear(PARTICIPATE_IN_WORK) }) }}</span>
 			</p>
 			<p class="text-center">
 				<nuxt-link
@@ -165,13 +166,21 @@
 <script lang="ts" setup>
 const { t } = useI18n()
 useSeoMeta({
-	title: t('resume.title', { name: t('name') as string }) as string,
+	title: t('title', { name: t('name') as string }) as string,
 	description: t('description') as string
 })
-const calculateAge = (birthday: Date = new Date('2001-11-16')) => {
+
+const BIRTHDAY = new Date('2001-11-16')
+const PARTICIPATE_IN_WORK = new Date('2023-07-01')
+const calculateYear = (target: Date) => {
 	const now = new Date()
-	const yearDifference = Math.abs(now.getFullYear() - birthday.getFullYear())
-	return birthday.getMonth() > now.getMonth() ? yearDifference - 1 : yearDifference
+
+	const targetYear = target.getFullYear()
+	const targetMonth = target.getMonth()
+	const currentYear = now.getFullYear()
+	const currentMonth = now.getMonth()
+	const monthDifference = (currentYear - targetYear) * 12 + (currentMonth - targetMonth)
+	return (monthDifference / 12).toFixed(1)
 }
 
 const exmapleProjects = [
