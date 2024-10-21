@@ -1,11 +1,14 @@
 <template>
 	<v-layout :routes="routes">
 		<v-card class="mt-32 ma-auto xl:w-45vw md:w-67vw sm:w-82vw lt-sm:w-82vw p-12 article-md">
-			<Icon
-				name="mdi:arrow-left-bold"
-				class="text-3xl hover:color-[--primary] cursor-pointer"
-				@click="$router.back()"
-			/>
+			<nuxt-link
+				to="../"
+			>
+				<Icon
+					name="mdi:arrow-left-bold"
+					class="text-3xl"
+				/>
+			</nuxt-link>
 			<content-doc>
 				<template #not-found>
 					<div class="text-center">
