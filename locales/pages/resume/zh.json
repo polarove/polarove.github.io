@@ -5,32 +5,26 @@
     "description": "一个愚者",
     "gender": "男",
     "age": {
-        "prefix": "年龄：",
         "value": "{age}岁"
     },
     "major": {
-        "prefix": "专业：",
         "value": "信息管理与信息系统"
     },
     "education": {
-        "prefix": "学位：",
         "value": "管理学学士"
     },
     "native-place": {
-        "prefix": "籍贯：",
         "value": "江西上饶"
     },
     "political": {
-        "prefix": "政治面貌：",
         "value": "非党员"
     },
     "email": {
-        "prefix": "邮箱：",
         "value": "liuqi6602@163.com"
     },
     "working": {
-        "prefix": "工作年限：",
-        "value": "于 {year} 参加工作"
+        "time": "于 {year} 参加工作",
+        "value": "({value} 年)"
     },
     "ability": {
         "index": "工作技能",
