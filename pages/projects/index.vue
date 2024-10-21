@@ -12,10 +12,10 @@
 </template>
 
 <script lang="ts" setup>
-const { t } = useI18n()
+const { ts } = useI18n()
 useSeoMeta({
-	title: t('title', { name: t('name') as string }) as string,
-	description: t('description') as string
+	title: ts('title', { name: ts('name') }),
+	description: ts('description')
 })
 const routes = [
 	{

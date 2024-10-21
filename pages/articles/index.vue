@@ -27,10 +27,10 @@
 </template>
 
 <script lang="ts" setup>
-const { t, localePath } = useI18n()
+const { ts, localePath } = useI18n()
 useSeoMeta({
-	title: t('title', { name: t('name') as string }) as string,
-	description: t('description') as string
+	title: ts('title', { name: ts('name') }),
+	description: ts('description')
 })
 const { data: navigation } = await useAsyncData('fetchContentNavigation', () =>
 	fetchContentNavigation()

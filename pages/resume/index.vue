@@ -2,18 +2,18 @@
 	<v-layout :routes="routes">
 		<v-card class="mt-32 ma-auto xl:w-45vw md:w-67vw sm:w-82vw lt-sm:w-82vw p-4">
 			<h1 class="text-center">
-				{{ t('name') }}
+				{{ $t('name') }}
 			</h1>
 			<p class="text-center">
-				<span class="mx-1">{{ t('gender') }}</span>/
-				<span class="mx-1">{{ t('age.value', { age: calculateYear(BIRTHDAY) }) }}</span>/
-				<span class="mx-1">{{ t('major.value') }}</span>/
-				<span class="mx-1">{{ t('education.value') }}</span>/
-				<span class="mx-1">{{ t('political.value') }}</span>
+				<span class="mx-1">{{ $t('gender') }}</span>/
+				<span class="mx-1">{{ $t('age.value', { age: calculateYear(BIRTHDAY) }) }}</span>/
+				<span class="mx-1">{{ $t('major.value') }}</span>/
+				<span class="mx-1">{{ $t('education.value') }}</span>/
+				<span class="mx-1">{{ $t('political.value') }}</span>
 			</p>
 			<p class="text-center">
-				<span class="mx-1">{{ t('working.time', { year: '2023-07' }) }}</span>
-				<span class="mx-1">{{ t('working.value', { value: calculateYear(PARTICIPATE_IN_WORK) }) }}</span>
+				<span class="mx-1">{{ $t('working.time', { year: '2023-07' }) }}</span>
+				<span class="mx-1">{{ $t('working.value', { value: calculateYear(PARTICIPATE_IN_WORK) }) }}</span>
 			</p>
 			<p class="text-center">
 				<nuxt-link
@@ -49,13 +49,13 @@
 					name="mdi:download"
 					class=" text-2xl vertical-mid"
 				/>
-				<span class="vertical-mid">{{ t('pdf') }}</span>
+				<span class="vertical-mid">{{ $t('pdf') }}</span>
 			</div>
 		</v-card>
 		<v-card class="mt-8 ma-auto xl:w-45vw md:w-67vw sm:w-82vw lt-sm:w-82vw p-4">
-			<h2>{{ t('ability.index') }}</h2>
-			<p>{{ t('ability.p0') }}</p>
-			<p>{{ t('ability.p1') }}</p>
+			<h2>{{ $t('ability.index') }}</h2>
+			<p>{{ $t('ability.p0') }}</p>
+			<p>{{ $t('ability.p1') }}</p>
 			<div class="md:flex justify-between lt-md:grid lt-md:grid-cols-[2fr_2fr] lt-md:gap-4">
 				<nuxt-link
 					v-for="project, index of exmapleProjects"
@@ -71,15 +71,15 @@
 							name="mdi:web"
 							class="vertical-mid text-xl mr-1"
 						/>
-						<span class="vertical-mid"> {{ t(project.translateKey) }} </span>
+						<span class="vertical-mid"> {{ $t(project.translateKey) }} </span>
 						<Icon name="mdi:arrow-top-right" />
 					</v-card>
 				</nuxt-link>
 			</div>
-			<p>{{ t('ability.p2') }}</p>
-			<p>{{ t('ability.p3') }}</p>
-			<p>{{ t('ability.p4') }}</p>
-			<p>{{ t('ability.p5') }}</p>
+			<p>{{ $t('ability.p2') }}</p>
+			<p>{{ $t('ability.p3') }}</p>
+			<p>{{ $t('ability.p4') }}</p>
+			<p>{{ $t('ability.p5') }}</p>
 			<nuxt-link
 				class="inline-block flex-1 text-inherit decoration-none md:mx-4"
 				to="https://api.warframe.team/swagger/index.html"
@@ -93,7 +93,7 @@
 				</v-card>
 			</nuxt-link>
 			<p>
-				<span>{{ t('ability.p6') }}&ensp;</span><nuxt-link
+				<span>{{ $t('ability.p6') }}&ensp;</span><nuxt-link
 					class="color-inherit hover:color-[--primary]"
 					to="http://warframe.team:8080/"
 				>Jenkins<Icon name="mdi:arrow-top-right" />
@@ -104,13 +104,13 @@
 				</nuxt-link>
 			</p>
 			<p>
-				<span>{{ t('ability.p7.seg0') }}</span>&ensp;<nuxt-link
+				<span>{{ $t('ability.p7.seg0') }}</span>&ensp;<nuxt-link
 					class="color-inherit hover:color-[--primary]"
 					to="https://developer.android.google.cn/courses/pathways/compose"
 				>Jetpack compose<Icon name="mdi:arrow-top-right" />
-				</nuxt-link>&ensp;<span>{{ t('ability.p7.seg1') }}</span>
+				</nuxt-link>&ensp;<span>{{ $t('ability.p7.seg1') }}</span>
 			</p>
-			<p>{{ t('ability.p8') }}</p>
+			<p>{{ $t('ability.p8') }}</p>
 			<div class="md:flex justify-between lt-md:grid lt-md:grid-cols-[2fr_2fr] lt-md:gap-4">
 				<nuxt-link
 					v-for="project, index of opensourceProjects"
@@ -153,14 +153,14 @@
 							:to="experience.url"
 							target="_blank"
 						>
-							<span>{{ t(experience.company) }}</span><Icon name="mdi:arrow-top-right" />
+							<span>{{ $t(experience.company) }}</span><Icon name="mdi:arrow-top-right" />
 						</nuxt-link>
 					</h2>
 					<h2 class="text-center">
 						{{ experience.start }} - {{ experience.until }}
 					</h2>
 					<h2 class="text-end">
-						{{ t(experience.position) }}
+						{{ $t(experience.position) }}
 					</h2>
 				</div>
 			</v-card>
@@ -169,10 +169,10 @@
 </template>
 
 <script lang="ts" setup>
-const { t } = useI18n()
+const { ts } = useI18n()
 useSeoMeta({
-	title: t('title', { name: t('name') as string }) as string,
-	description: t('description') as string
+	title: ts('title', { name: ts('name') }),
+	description: ts('description')
 })
 
 const BIRTHDAY = new Date('2001-11-16')
