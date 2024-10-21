@@ -1,0 +1,1 @@
+import{x as e,o as n,g as s,z as t}from"./D_XNEbbg.js";const c={},r={class:"bg-[--background-card] rounded-2 shadow-md b-1 b-[--background-page] b-solid position-relative"};function a(o,_){return n(),s("section",r,[t(o.$slots,"default")])}const i=e(c,[["render",a]]);export{i as _};
