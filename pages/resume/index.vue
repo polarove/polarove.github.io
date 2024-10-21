@@ -1,6 +1,6 @@
 <template>
 	<v-layout :routes="routes">
-		<v-card class="mt-32 ma-auto xl:w-45vw md:w-67vw sm:w-89vw lt-sm:w-89vw p-4">
+		<v-card class="mt-32 ma-auto xl:w-45vw md:w-67vw sm:w-82vw lt-sm:w-82vw p-4">
 			<h1 class="text-center">
 				{{ t('name') }}
 			</h1>
@@ -52,7 +52,7 @@
 				<span class="vertical-mid">{{ t('pdf') }}</span>
 			</div>
 		</v-card>
-		<v-card class="mt-8 ma-auto xl:w-45vw md:w-67vw sm:w-89vw lt-sm:w-89vw p-4">
+		<v-card class="mt-8 ma-auto xl:w-45vw md:w-67vw sm:w-82vw lt-sm:w-82vw p-4">
 			<h2>{{ t('ability.index') }}</h2>
 			<p>{{ t('ability.p0') }}</p>
 			<p>{{ t('ability.p1') }}</p>
@@ -133,7 +133,7 @@
 				</nuxt-link>
 			</div>
 		</v-card>
-		<v-card class="my-8 ma-auto xl:w-45vw md:w-67vw sm:w-89vw lt-sm:w-89vw p-4">
+		<v-card class="my-8 ma-auto xl:w-45vw md:w-67vw sm:w-82vw lt-sm:w-82vw p-4">
 			<h2>工作经历</h2>
 			<v-card
 				v-for="experience, index of workExperiences"
@@ -143,8 +143,13 @@
 			>
 				<div class="grid grid-cols-[3fr_3fr_3fr] items-center">
 					<h2>
+						<Icon
+							v-if="experience.incumbency"
+							name="mdi:star"
+							class="text-2xl vertical-mid color-orange"
+						/>
 						<nuxt-link
-							class="text-inherit decoration-none hover:color-[--primary]"
+							class="text-inherit decoration-none hover:color-[--primary] vertical-mid"
 							:to="experience.url"
 							target="_blank"
 						>
