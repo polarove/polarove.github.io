@@ -1,6 +1,6 @@
 <template>
 	<v-layout :routes="routes">
-		<v-card class="mt-24 p-12 ma-auto xl:w-45vw md:w-67vw sm:w-89vw lt-sm:w-89vw article-md">
+		<v-card class="mt-32 ma-auto xl:w-45vw md:w-67vw sm:w-82vw lt-sm:w-82vw article-md">
 			<Icon
 				name="mdi:arrow-left-bold"
 				class="text-3xl hover:color-[--primary] cursor-pointer"

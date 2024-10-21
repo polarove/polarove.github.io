@@ -1,6 +1,6 @@
 <template>
 	<v-layout :routes="routes">
-		<main class="p-24 w-45vw ma-auto">
+		<v-card class="mt-32 ma-auto xl:w-45vw md:w-67vw sm:w-82vw lt-sm:w-82vw">
 			<div
 				v-for="(directory, index) of menu"
 				:key="index"
@@ -22,7 +22,7 @@
 					{{ link.title }}
 				</nuxt-link>
 			</div>
-		</main>
+		</v-card>
 	</v-layout>
 </template>
 
