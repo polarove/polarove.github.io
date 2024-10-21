@@ -18,11 +18,7 @@
 				<i18n-link
 					class="decoration-none color-inherit hover:color-$primary"
 					:aria-label="$t(route.translateKey)"
-					:class="[
-						$localePath(route.path) == $route.path
-							? 'color-$primary!'
-							: ''
-					]"
+					:active-style="{ color: 'var(--primary)' }"
 					:to="route.path"
 					:prefetch="true"
 				>

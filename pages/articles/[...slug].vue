@@ -2,7 +2,7 @@
 	<v-layout :routes="routes">
 		<v-card class="mt-32 ma-auto xl:w-45vw md:w-67vw sm:w-82vw lt-sm:w-82vw p-12 article-md">
 			<nuxt-link
-				to="../"
+				to=".."
 			>
 				<Icon
 					name="mdi:arrow-left-bold"
