@@ -46,6 +46,15 @@ export default defineNuxtConfig({
 			}
 		}
 	},
+
+	experimental: {
+		defaults: {
+			// https://nuxt.com/docs/api/components/nuxt-link#nuxtlink
+			nuxtLink: {
+				trailingSlash: 'remove' // can be 'append' or 'remove'
+			}
+		}
+	},
 	compatibilityDate: '2024-04-03',
 	eslint: {
 		config: {
@@ -73,7 +82,6 @@ export default defineNuxtConfig({
 			}
 		]
 	}
-
 	// usage: https://unocss.dev/integrations/nuxt#configuration
 	// unocss: {
 	// 	nuxtLayers: true
