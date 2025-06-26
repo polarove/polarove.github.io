@@ -43,15 +43,15 @@
       "Java-engineer": "Java Engineer"
     },
     "p0": "[Language] Certificated CET-6, won several competitions during college and is able to use English as a working language.",
-    "p1": "[Tech] 2 years dev experience on vue/nuxt, knowns the fundamentals of it, and I have the ability to build SEO friendly, multi platform compatible, and interactive website pages based on design drafts.",
-    "p2": "[Tech] 2 years dev experience on Java & half year dev experience on .NET core for backend development.",
-    "p3": "[Tech] Have the knowledge about distributed system, service registration and discovery, remote call, traffic breaker, distributed lock, message queue, cache etc.",
-    "p4": "[Tech] Have basic knowledge of databases, such as transactions, rollback, table locking, query optimization, index optimization, and can use MySQL and redis.",
-    "p5": "[Tech] My backend development skills have made me very familiar with the RESTful API, thus I am able to efficiently cooperate with backend developers to solve problems.",
-    "p6": "[Tech] Proficient in using Docker for containerization testing of web projects and having knowledge of common continuous delivery platforms, such as",
+    "p1": "[Tech] With 2 years of experience in Vue/Nuxt web development, I am able to restore SEO friendly, corss-platform compatible, and interactive website pages based on design drafts.",
+    "p2": "[Tech] 2 years experience on Java & 1 year experience on .NET Core(8+) for building RESTful api services.",
+    "p3": "[Tech] Possess strong learning ability, willing to accept and evaluate the feasibility of new things, do not engage in empiricism or dogmatism, and practice to gain true knowledge.",
+    "p4": "[Tech] Understand distributed system components such as service registration and discovery, remote calling, traffic throttling, scheduled tasks, distributed locks, message queues, caching, etc.",
+    "p5": "[Tech] Possess basic knowledge of databases, such as transactions, rollback, table locking, row locking, query optimization, index optimization; Proficient in using common databases and ORM frameworks, such as MySQL & MyBatis & MyBatis Plus & SQLServer & SQLBugar & EFCore, etc.",
+    "p6": "[Tech] Possess knowledge of Docker, understand container concepts, able to write Dockerfiles and docker-compose.yaml, and have a certain understanding of Docker networks, volumes, and build parameters.",
     "p7": {
-      "seg0": "[Tech] Have some understanding of cross platform mobile development, have used Flutter / uniapp in personal or previous company projects, and have learned Android native development",
-      "seg1": "To deepen understanding of cross platform development."
+      "seg0": "[Tech] Have some understanding of cross platform mobile development, such as uniapp/flutter/mini programs.",
+      "seg1": "Can quickly solve usual technical problems in cross platform mobile development."
     },
     "p8": "[Footprints of open source] participating in open source community projects with passion and providing assistance to the best of my ability, I am currently maintaining the following projects."
   }

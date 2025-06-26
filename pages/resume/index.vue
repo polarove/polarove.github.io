@@ -6,14 +6,14 @@
 			</h1>
 			<p class="text-center">
 				<span class="mx-1">{{ $t('gender') }}</span>/
-				<span class="mx-1">{{ $t('age.value', { age: calculateYear(BIRTHDAY) }) }}</span>/
+				<span class="mx-1">{{ $t('age.value', { age: toYear(constants.birthday) }) }}</span>/
 				<span class="mx-1">{{ $t('major.value') }}</span>/
 				<span class="mx-1">{{ $t('education.value') }}</span>/
 				<span class="mx-1">{{ $t('political.value') }}</span>
 			</p>
 			<p class="text-center">
 				<span class="mx-1">{{ $t('working.time', { year: '2023-07' }) }}</span>
-				<span class="mx-1">{{ $t('working.value', { value: calculateYear(PARTICIPATE_IN_WORK) }) }}</span>
+				<span class="mx-1">{{ $t('working.value', { value: toYear(constants.participate_in_work) }) }}</span>
 			</p>
 			<p class="text-center">
 				<nuxt-link
@@ -56,92 +56,35 @@
 			<h2>{{ $t('ability.index') }}</h2>
 			<p>{{ $t('ability.p0') }}</p>
 			<p>{{ $t('ability.p1') }}</p>
-			<div class="md:flex justify-between lt-md:grid lt-md:grid-cols-[2fr_2fr] lt-md:gap-4">
-				<nuxt-link
-					v-for="project, index of exmapleProjects"
-					:key="index"
-					class="inline-block flex-1 text-inherit decoration-none md:mx-4"
-					:to="project.url"
-					target="_blank"
-				>
-					<v-card
-						class="b-solid py-4 px-6 hover:b-[--primary] cursor-pointer"
-					>
-						<Icon
-							name="mdi:web"
-							class="vertical-mid text-xl mr-1"
-						/>
-						<span class="vertical-mid"> {{ $t(project.translateKey) }} </span>
-						<Icon name="mdi:arrow-top-right" />
-					</v-card>
-				</nuxt-link>
-			</div>
 			<p>{{ $t('ability.p2') }}</p>
-			<p>{{ $t('ability.p3') }}</p>
+			<p>{{ $t('ability.p3', { experience: toYear(constants.participate_in_dotnet) }) }}</p>
 			<p>{{ $t('ability.p4') }}</p>
-			<p>{{ $t('ability.p5') }}</p>
-			<nuxt-link
-				class="inline-block flex-1 text-inherit decoration-none md:mx-4"
-				to="https://api.warframe.team/swagger/index.html"
-				target="_blank"
-			>
-				<v-card
-					class=" py-4 px-6 hover:b-[--primary] cursor-pointer"
-				>
-					<span> Swagger page </span>
-					<Icon name="mdi:arrow-top-right" />
-				</v-card>
-			</nuxt-link>
 			<p>
-				<span>{{ $t('ability.p6') }}&ensp;</span><nuxt-link
-					class="color-inherit hover:color-[--primary]"
-					to="http://warframe.team:8080/"
-				>Jenkins<Icon name="mdi:arrow-top-right" />
-				</nuxt-link> / <nuxt-link
-					class="color-inherit hover:color-[--primary]"
-					to="https://coding.net/"
-				>Tencent Coding<Icon name="mdi:arrow-top-right" />
-				</nuxt-link>
+				{{ $t('ability.p5') }}
 			</p>
 			<p>
-				<span>{{ $t('ability.p7.seg0') }}</span>&ensp;<nuxt-link
-					class="color-inherit hover:color-[--primary]"
-					to="https://developer.android.google.cn/courses/pathways/compose"
-				>Jetpack compose<Icon name="mdi:arrow-top-right" />
-				</nuxt-link>&ensp;<span>{{ $t('ability.p7.seg1') }}</span>
+				{{ $t('ability.p6') }}
 			</p>
+			<p>{{ $t('ability.p7') }}</p>
 			<p>{{ $t('ability.p8') }}</p>
-			<div class="md:flex justify-between lt-md:grid lt-md:grid-cols-[2fr_2fr] lt-md:gap-4">
-				<nuxt-link
-					v-for="project, index of opensourceProjects"
-					:key="index"
-					class="inline-block flex-1 text-inherit decoration-none md:mx-4"
-					:to="project.url"
-					target="_blank"
-				>
-					<v-card
-						:class="[index != 0 && index!=exmapleProjects.length ? 'mx-4' : '']"
-						class="py-4 px-6 hover:b-[--primary] cursor-pointer"
-					>
-						<Icon
-							name="mdi:github"
-							class="vertical-mid text-xl mr-2"
-						/>
-						<span class="vertical-mid"> {{ project.translateKey }} </span>
-						<Icon name="mdi:arrow-top-right" />
-					</v-card>
-				</nuxt-link>
-			</div>
+		</v-card>
+		<v-card class="mt-8 ma-auto xl:w-45vw md:w-67vw sm:w-82vw lt-sm:w-82vw p-4">
+			<h2>{{ $t('frameworks.index') }}</h2>
+			<p>{{ $t('frameworks.p0') }}</p>
+			<p>{{ $t('frameworks.p1') }}</p>
+			<p>{{ $t('frameworks.p2') }}</p>
+			<p>{{ $t('frameworks.p3') }}</p>
+			<p>{{ $t('frameworks.p4') }}</p>
 		</v-card>
 		<v-card class="my-8 ma-auto xl:w-45vw md:w-67vw sm:w-82vw lt-sm:w-82vw p-4">
-			<h2>工作经历</h2>
+			<h2>工作经验</h2>
 			<v-card
 				v-for="experience, index of workExperiences"
 				:key="index"
 				:class="[experience.incumbency ? 'b-[--primary]' : '']"
 				class="py-4 px-6 hover:b-[--primary] cursor-pointer not-first:mt-4"
 			>
-				<div class="grid grid-cols-[3fr_3fr_3fr] items-center">
+				<div class="grid grid-cols-[3fr_3fr_3fr_3fr] items-center">
 					<h2>
 						<Icon
 							v-if="experience.incumbency"
@@ -153,14 +96,18 @@
 							:to="experience.url"
 							target="_blank"
 						>
-							<span>{{ $t(experience.company) }}</span><Icon name="mdi:arrow-top-right" />
+							<span>{{ $t(experience.company) }}</span>
+							<Icon name="mdi:arrow-top-right" />
 						</nuxt-link>
 					</h2>
 					<h2 class="text-center">
-						{{ experience.start }} - {{ experience.until }}
+						{{ experience.since }} - {{ experience.until }}
+					</h2>
+					<h2 class="text-center">
+						{{ $t('company.total', { year: toYear(new Date(experience.since), new Date(experience.until)) }) }}
 					</h2>
 					<h2 class="text-end">
-						{{ $t(experience.position) }}
+						{{ $t(experience.title) }}
 					</h2>
 				</div>
 			</v-card>
@@ -175,64 +122,55 @@ useSeoMeta({
 	description: ts('description')
 })
 
-const BIRTHDAY = new Date('2001-11-16')
-const PARTICIPATE_IN_WORK = new Date('2023-07-01')
-const calculateYear = (target: Date) => {
-	const now = new Date()
-
-	const targetYear = target.getFullYear()
-	const targetMonth = target.getMonth()
-	const currentYear = now.getFullYear()
-	const currentMonth = now.getMonth()
-	const monthDifference = (currentYear - targetYear) * 12 + (currentMonth - targetMonth)
-	return (monthDifference / 12).toFixed(1)
+const constants = {
+	birthday: new Date('2001-11-16'),
+	participate_in_work: new Date('2023-07-01'),
+	participate_in_dotnet: new Date('2024-11-16')
 }
 
-const exmapleProjects = [
-	{
-		translateKey: 'ability.project.warframe-team',
-		url: 'https://warframe.team'
-	},
-	{
-		translateKey: 'ability.project.fissure-clock',
-		url: 'http://warframe.team:3001'
-	},
-	{
-		translateKey: 'ability.project.yaoren',
-		url: 'http://warframe.team:3002'
-	},
-	{
-		translateKey: 'ability.project.stylized',
-		url: 'http://warframe.team:4001'
-	}
-]
+// 重载签名
+function toYear(since: Date, until?: Date): string
 
-const opensourceProjects = [
-	{
-		translateKey: 'cz-translated-changelog',
-		url: 'https://github.com/polarove/cz-translated-changelog-zh-cn'
-	},
-	{
-		translateKey: 'cz-translated-lint',
-		url: 'https://github.com/polarove/translated-lint-zh-cn'
+// 实现
+function toYear(since: Date, until?: Date): string {
+	if (until === undefined) {
+		until = new Date() // 使用当前日期作为参考
 	}
-]
+
+	// 确保 since <= until
+	if (since > until) {
+		[since, until] = [until, since] // 交换
+	}
+
+	const totalMonths = (until.getFullYear() - since.getFullYear()) * 12 + (until.getMonth() - since.getMonth())
+	const yearDiff = totalMonths / 12
+
+	return yearDiff.toFixed(1) // 保留 1 位小数
+}
 
 const workExperiences = [
 	{
-		company: 'ability.company.tukun',
+		company: 'company.p2.name',
 		url: 'https://gtesim.cn',
 		incumbency: true,
-		position: 'ability.position.Front-end-engineer',
-		start: '2023/11',
-		until: 'Now'
+		title: 'company.p2.title',
+		since: '2023/11',
+		until: new Date().toLocaleDateString()
 	},
 	{
-		company: 'ability.company.renshu',
+		company: 'company.p1.name',
+		url: 'https://gtesim.cn',
+		incumbency: false,
+		title: 'company.p1.title',
+		since: '2023/11',
+		until: '2024/11'
+	},
+	{
+		company: 'company.p0.name',
 		url: 'http://fjrcsz.com/',
 		incumbency: false,
-		position: 'ability.position.Java-engineer',
-		start: '2023/06',
+		title: 'company.p0.title',
+		since: '2023/06',
 		until: '2023/07'
 	}
 ]

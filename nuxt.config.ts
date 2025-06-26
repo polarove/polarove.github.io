@@ -7,7 +7,6 @@ export default defineNuxtConfig({
 		'@unocss/nuxt',
 		'@nuxtjs/color-mode',
 		'nuxt-i18n-micro',
-		'@nuxt/content',
 		'@nuxt/eslint'
 	],
 	devtools: { enabled: true },
@@ -33,18 +32,6 @@ export default defineNuxtConfig({
 		classPrefix: '',
 		fallback: 'system',
 		preference: 'system'
-	},
-	content: {
-		highlight: {
-			theme: {
-				// Default theme (same as single string)
-				default: 'github-light',
-				// Theme used if `html.dark`
-				dark: 'github-dark',
-				// Theme used if `html.sepia`
-				sepia: 'monokai'
-			}
-		}
 	},
 
 	experimental: {
