@@ -73,11 +73,11 @@
         },
         "p6": {
             "brief": "技术 - 熟练掌握主流 ORM 的使用",
-            "detail": "EFCore / SQLSugar / MyBatis / MyBatis Plus."
+            "detail": "EFCore / SQLSugar / MyBatis / MyBatis Plus。"
         },
         "p7": {
             "brief": "技术 - 容器技术在我参与的项目中广泛使用",
-            "detail": "掌握基本的容器知识与理念，能够根据业务需要编写 Dockerfile 和 docker-compose.yaml 进行容器的编排与管理"
+            "detail": "掌握基本的容器知识与理念，能够根据业务需要编写 Dockerfile 和 docker-compose.yaml 进行容器的编排与管理。"
         },
         "p8": {
             "brief": "爱好 - 睡好觉",
