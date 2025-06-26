@@ -1,1 +1,0 @@
-import{p as e,f as n,o as s,Q as t}from"./G5Gl5_fp.js";const c={},r={class:"bg-[--background-card] rounded-2 shadow-md b-1 b-[--background-page] b-solid position-relative"};function a(o,_){return s(),n("section",r,[t(o.$slots,"default")])}const i=e(c,[["render",a]]);export{i as _};
