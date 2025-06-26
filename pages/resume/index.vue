@@ -295,6 +295,15 @@ const projects = [
 		incumbency: true
 	},
 	{
+		name: 'projects.p2.name',
+		title: 'projects.p2.title',
+		companies: 'projects.p2.companies',
+		since: '2024/04',
+		until: '2024/08',
+		link: 'https://redeem.gtesim.com',
+		incumbency: false
+	},
+	{
 		name: 'projects.p1.name',
 		title: 'projects.p1.title',
 		companies: 'projects.p1.companies',
