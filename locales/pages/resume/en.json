@@ -56,12 +56,12 @@
       "detail": "I'd like to accept and evaluate the feasibility of new things, not practicing empiricism or dogmatism, but gaining truth through practice."
     },
     "p2": {
-      "brief": "Experience - Well practiced ability of building fluent, SEO friendly and stable web apps",
-      "detail": "2 years of dedicated experience both in Vue/Nuxt development."
-    },
-    "p3": {
       "brief": "Experience - Well practiced ability of building RESTful api services",
       "detail": "2 years of Java (8+) & {experience} years of NET Core (8.0+) dedicated experience for building RESTful api services."
+    },
+    "p3": {
+      "brief": "Experience - Well practiced ability of building fluent, SEO friendly and stable web apps",
+      "detail": "2 years of dedicated experience both in Vue/Nuxt development."
     },
     "p4": {
       "brief": "Tech - Well practiced ability of building distributed system according to requirements",
