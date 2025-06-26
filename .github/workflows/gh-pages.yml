@@ -21,10 +21,10 @@ jobs:
                   node-version: 20
 
             - name: Install dependencies
-              run: yarn
+              run: pnpm i
 
             - name: Generate static site
-              run: yarn generate
+              run: pnpm generate
 
             - name: Deploy to GitHub Pages
               uses: peaceiris/actions-gh-pages@v4
