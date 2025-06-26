@@ -92,7 +92,8 @@
         "p2": "【容器】 Docker / k8s",
         "p3": "【数据库】 MySQL / Redis / SQLServer / MongoDB",
         "p4": "【ORM】 EFCore / SQLSugar",
-        "p5": "【全文搜索】 Elastic Search / Kibana"
+        "p5": "【全文搜索】 Elastic Search / Kibana",
+        "p6": "【消息队列】 RabbitMQ & Masstransit"
     },
     "projects": {
         "index": "项目经历",

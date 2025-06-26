@@ -92,7 +92,8 @@
     "p2": "[Container] Docker / k8s",
     "p3": "[Database] MySQL / Redis / SQLServer / MongoDB",
     "p4": "[ORM] EFCore / SQLSugar",
-    "p5": "[Search] Elastic Search / Kibana"
+    "p5": "[Search] Elastic Search / Kibana",
+    "p6": "[Message] RabbitMQ & Masstransit"
   },
   "projects": {
     "index": "Projects",

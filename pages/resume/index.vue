@@ -112,6 +112,8 @@
 			<p>{{ $t('frameworks.p2') }}</p>
 			<p>{{ $t('frameworks.p3') }}</p>
 			<p>{{ $t('frameworks.p4') }}</p>
+			<p>{{ $t('frameworks.p5') }}</p>
+			<p>{{ $t('frameworks.p6') }}</p>
 		</v-card>
 		<v-card class="my-8 ma-auto xl:w-45vw md:w-67vw sm:w-82vw lt-sm:w-82vw p-4">
 			<h1>{{ $t('projects.index') }}</h1>
