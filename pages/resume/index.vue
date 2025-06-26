@@ -217,8 +217,7 @@ function toYear(since: Date, until?: Date): string {
 
 // 实现
 function toMonth(since: Date, until?: Date): string {
-	const totalMonths = calculateMonthGap(since, until)
-	return totalMonths.toFixed(1) // 保留 1 位小数
+	return calculateMonthGap(since, until)
 }
 
 // 实现
