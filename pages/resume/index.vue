@@ -19,7 +19,7 @@
 			<p class="text-center">
 				<nuxt-link
 					to="https://github.com/polarove"
-					class="color-inherit"
+					class="color-inherit hover:color-[--primary]"
 				>
 					<Icon
 						name="mdi:github"
@@ -28,10 +28,19 @@
 				</nuxt-link>
 				<nuxt-link
 					to="https://steamcommunity.com/id/AnibeRzzzz/"
-					class="color-inherit"
+					class="color-inherit hover:color-[--primary]"
 				>
 					<Icon
 						name="mdi:steam"
+						class="text-3xl mx-2"
+					/>
+				</nuxt-link>
+				<nuxt-link
+					to="mailto:liuqi6602@163.com"
+					class="color-inherit cursor-pointer hover:color-[--primary]"
+				>
+					<Icon
+						name="mdi:email"
 						class="text-3xl mx-2"
 					/>
 				</nuxt-link>
