@@ -1,23 +1,28 @@
+# Stage 1: transfer files
+FROM node:22.16-slim as transfer
+WORKDIR /files
+
+COPY . .
+
 # Stage 1: Build
-FROM node:20.10.0 as build
+FROM node:22.16-slim as build
 
 WORKDIR /app
 
-# Copy only package.json and yarn.lock first to leverage Docker cache
-COPY package.json yarn.lock ./
+COPY --from=transfer /files ./
 
-RUN yarn install
+# ARG NUXT_API_BASE_URL
+# ENV NUXT_API_BASE_URL=$NUXT_API_BASE_URL
 
-# Copy the rest of the application code
-COPY . .
+RUN corepack enable && corepack prepare pnpm@latest --activate
+RUN pnpm install
 
-RUN yarn build
+# 安装 pnpm
+RUN pnpm run build
 
 # Stage 2: Production
-FROM node:20.10.0 as production
+FROM node:22.16-slim as production
 
-ENV NODE_ENV=production
-ENV HOST=0.0.0.0
 EXPOSE 3000
 
 WORKDIR /app
@@ -25,4 +30,5 @@ WORKDIR /app
 # Copy built output from build stage
 COPY --from=build /app/.output . 
 
+# ENV NUXT_API_BASE_URL=$NUXT_API_BASE_URL
 CMD [ "node", "./server/index.mjs" ]

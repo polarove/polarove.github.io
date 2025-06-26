@@ -12,8 +12,9 @@
 				<span class="mx-1">{{ $t('political.value') }}</span>
 			</p>
 			<p class="text-center">
-				<span class="mx-1">{{ $t('working.time', { year: '2023-07' }) }}</span>
-				<span class="mx-1">{{ $t('working.value', { value: toYear(constants.participate_in_work) }) }}</span>
+				<span class="mx-1">{{ $t('working.time', { year: '2023-07' }) }}</span>/
+				<span class="mx-1">{{ $t('working.value', { value: toYear(constants.participate_in_work) }) }}</span>/
+				<span class="mx-1">{{ $t('field.value', { value: toYear(constants.participate_in_work) }) }}</span>
 			</p>
 			<p class="text-center">
 				<nuxt-link
@@ -53,62 +54,129 @@
 			</div>
 		</v-card>
 		<v-card class="mt-8 ma-auto xl:w-45vw md:w-67vw sm:w-82vw lt-sm:w-82vw p-4">
-			<h2>{{ $t('ability.index') }}</h2>
-			<p>{{ $t('ability.p0') }}</p>
-			<p>{{ $t('ability.p1') }}</p>
-			<p>{{ $t('ability.p2') }}</p>
-			<p>{{ $t('ability.p3', { experience: toYear(constants.participate_in_dotnet) }) }}</p>
-			<p>{{ $t('ability.p4') }}</p>
-			<p>
-				{{ $t('ability.p5') }}
-			</p>
-			<p>
-				{{ $t('ability.p6') }}
-			</p>
-			<p>{{ $t('ability.p7') }}</p>
-			<p>{{ $t('ability.p8') }}</p>
+			<h1>{{ $t('abilities.index') }}</h1>
+			<h2>{{ $t('abilities.p0.brief') }}</h2>
+			<p>{{ $t('abilities.p0.detail') }}</p>
+			<h2>{{ $t('abilities.p1.brief') }}</h2>
+			<p>{{ $t('abilities.p1.detail') }}</p>
+			<h2>{{ $t('abilities.p2.brief') }}</h2>
+			<p>{{ $t('abilities.p2.detail') }}</p>
+			<h2>{{ $t('abilities.p3.brief') }}</h2>
+			<p>{{ $t('abilities.p3.detail', { experience: toYear(constants.participate_in_dotnet) }) }}</p>
 		</v-card>
 		<v-card class="mt-8 ma-auto xl:w-45vw md:w-67vw sm:w-82vw lt-sm:w-82vw p-4">
-			<h2>{{ $t('frameworks.index') }}</h2>
-			<p>{{ $t('frameworks.p0') }}</p>
-			<p>{{ $t('frameworks.p1') }}</p>
+			<h2>{{ $t('abilities.p4.brief') }}</h2>
+			<p>{{ $t('abilities.p4.detail') }}</p>
+			<h2>{{ $t('abilities.p5.brief') }}</h2>
+			<p>
+				{{ $t('abilities.p5.detail') }}
+			</p>
+			<h2>{{ $t('abilities.p6.brief') }}</h2>
+			<p>
+				{{ $t('abilities.p6.detail') }}
+			</p>
+			<h2>{{ $t('abilities.p7.brief') }}</h2>
+			<p>{{ $t('abilities.p7.detail') }}</p>
+			<h2>{{ $t('abilities.p8.brief') }}</h2>
+			<p>{{ $t('abilities.p8.detail') }}</p>
+		</v-card>
+		<v-card class="mt-8 ma-auto xl:w-45vw md:w-67vw sm:w-82vw lt-sm:w-82vw p-4">
+			<h1>{{ $t('frameworks.index') }}</h1>
+			<h3>{{ $t('frameworks.subtitle') }}</h3>
+			<p
+				class="flex items-center text-[--primary]"
+			>
+				<Icon
+					name="mdi:star"
+					class="text-2xl color-orange mr-1"
+				/>
+				<span>{{ $t('frameworks.p0') }}</span>
+			</p>
+			<p
+				class="flex items-center text-[--primary]"
+			>
+				<Icon
+					name="mdi:star"
+					class="text-2xl color-orange mr-1"
+				/>{{ $t('frameworks.p1') }}
+			</p>
 			<p>{{ $t('frameworks.p2') }}</p>
 			<p>{{ $t('frameworks.p3') }}</p>
 			<p>{{ $t('frameworks.p4') }}</p>
 		</v-card>
 		<v-card class="my-8 ma-auto xl:w-45vw md:w-67vw sm:w-82vw lt-sm:w-82vw p-4">
-			<h2>工作经验</h2>
+			<h1>{{ $t('projects.index') }}</h1>
 			<v-card
-				v-for="experience, index of workExperiences"
+				v-for="project, index of projects"
 				:key="index"
-				:class="[experience.incumbency ? 'b-[--primary]' : '']"
 				class="py-4 px-6 hover:b-[--primary] cursor-pointer not-first:mt-4"
+				:class="[project.incumbency && 'b-[--primary]', project.incumbency && 'text-[--primary]', project.incumbency && 'font-bold']"
 			>
-				<div class="grid grid-cols-[3fr_3fr_3fr_3fr] items-center">
-					<h2>
+				<div class="grid grid-cols-[3fr_3fr_3fr] items-center">
+					<div>
 						<Icon
-							v-if="experience.incumbency"
+							v-if="project.incumbency"
 							name="mdi:star"
-							class="text-2xl vertical-mid color-orange"
+							class="text-2xl vertical-mid color-orange mr-1"
 						/>
+						<span
+							class="text-center vertical-mid text-lg"
+						>
+							{{ $t('projects.total', { month: toMonth(new Date(project.since), new Date(project.until)) }) }}
+						</span>
 						<nuxt-link
-							class="text-inherit decoration-none hover:color-[--primary] vertical-mid"
-							:to="experience.url"
+							class="block my-2 text-inherit decoration-none hover:color-[--primary] vertical-mid"
+							:to="project.link"
 							target="_blank"
 						>
-							<span>{{ $t(experience.company) }}</span>
+							<span>{{ $t(project.companies) }}</span>
 							<Icon name="mdi:arrow-top-right" />
 						</nuxt-link>
-					</h2>
-					<h2 class="text-center">
-						{{ experience.since }} - {{ experience.until }}
-					</h2>
-					<h2 class="text-center">
-						{{ $t('company.total', { year: toYear(new Date(experience.since), new Date(experience.until)) }) }}
-					</h2>
-					<h2 class="text-end">
-						{{ $t(experience.title) }}
-					</h2>
+					</div>
+					<span class="text-center">
+						{{ project.since }} - {{ project.until }}
+					</span>
+					<span class="text-end">
+						{{ $t(project.title) }}
+					</span>
+				</div>
+			</v-card>
+		</v-card>
+		<v-card class="my-8 ma-auto xl:w-45vw md:w-67vw sm:w-82vw lt-sm:w-82vw p-4">
+			<h1>{{ $t('companies.index') }}</h1>
+			<v-card
+				v-for="career, index of careers"
+				:key="index"
+				:class="[career.incumbency && 'b-[--primary]', career.incumbency && 'text-[--primary]', career.incumbency && 'font-bold']"
+				class="py-4 px-6 hover:b-[--primary] cursor-pointer not-first:mt-4"
+			>
+				<div class="grid grid-cols-[3fr_3fr_3fr] items-center">
+					<div>
+						<Icon
+							v-if="career.incumbency"
+							name="mdi:star"
+							class="text-2xl vertical-mid color-orange mr-1"
+						/>
+						<span
+							class="text-center vertical-mid text-lg"
+						>
+							{{ $t('companies.total', { year: toYear(new Date(career.since), new Date(career.until)) }) }}
+						</span>
+						<nuxt-link
+							class="block my-2 text-inherit decoration-none hover:color-[--primary] vertical-mid"
+							:to="career.link"
+							target="_blank"
+						>
+							<span>{{ $t(career.companies) }}</span>
+							<Icon name="mdi:arrow-top-right" />
+						</nuxt-link>
+					</div>
+					<span class="text-center">
+						{{ career.since }} - {{ career.until }}
+					</span>
+					<span class="text-end">
+						{{ $t(career.position) }}
+					</span>
 				</div>
 			</v-card>
 		</v-card>
@@ -128,11 +196,21 @@ const constants = {
 	participate_in_dotnet: new Date('2024-11-16')
 }
 
-// 重载签名
-function toYear(since: Date, until?: Date): string
-
 // 实现
 function toYear(since: Date, until?: Date): string {
+	const totalMonths = calculateMonthGap(since, until)
+	const yearDiff = totalMonths / 12
+	return yearDiff.toFixed(1) // 保留 1 位小数
+}
+
+// 实现
+function toMonth(since: Date, until?: Date): string {
+	const totalMonths = calculateMonthGap(since, until)
+	return totalMonths.toFixed(1) // 保留 1 位小数
+}
+
+// 实现
+function calculateMonthGap(since: Date, until?: Date) {
 	if (until === undefined) {
 		until = new Date() // 使用当前日期作为参考
 	}
@@ -142,34 +220,31 @@ function toYear(since: Date, until?: Date): string {
 		[since, until] = [until, since] // 交换
 	}
 
-	const totalMonths = (until.getFullYear() - since.getFullYear()) * 12 + (until.getMonth() - since.getMonth())
-	const yearDiff = totalMonths / 12
-
-	return yearDiff.toFixed(1) // 保留 1 位小数
+	return (until.getFullYear() - since.getFullYear()) * 12 + (until.getMonth() - since.getMonth())
 }
 
-const workExperiences = [
+const careers = [
 	{
-		company: 'company.p2.name',
-		url: 'https://gtesim.cn',
+		companies: 'companies.p2.name',
+		link: 'https://gtesim.cn',
 		incumbency: true,
-		title: 'company.p2.title',
-		since: '2023/11',
+		position: 'companies.p2.position',
+		since: '2024/08	',
 		until: new Date().toLocaleDateString()
 	},
 	{
-		company: 'company.p1.name',
-		url: 'https://gtesim.cn',
+		companies: 'companies.p1.name',
+		link: 'https://gtesim.cn',
 		incumbency: false,
-		title: 'company.p1.title',
+		position: 'companies.p1.position',
 		since: '2023/11',
-		until: '2024/11'
+		until: '2024/08'
 	},
 	{
-		company: 'company.p0.name',
-		url: 'http://fjrcsz.com/',
+		companies: 'companies.p0.name',
+		link: 'http://fjrcsz.com/',
 		incumbency: false,
-		title: 'company.p0.title',
+		position: 'companies.p0.position',
 		since: '2023/06',
 		until: '2023/07'
 	}
@@ -195,6 +270,27 @@ const routes = [
 		path: '/articles',
 		translateKey: 'article',
 		icon: 'mdi:file-document-edit-outline'
+	}
+]
+
+const projects = [
+	{
+		name: 'projects.p0.name',
+		title: 'projects.p0.title',
+		companies: 'projects.p0.companies',
+		since: '2024/08',
+		until: new Date().toLocaleDateString(),
+		link: '_blank',
+		incumbency: true
+	},
+	{
+		name: 'projects.p1.name',
+		title: 'projects.p1.title',
+		companies: 'projects.p1.companies',
+		since: '2023/11',
+		until: '2024/04',
+		link: 'https://gtesim.cn',
+		incumbency: false
 	}
 ]
 </script>

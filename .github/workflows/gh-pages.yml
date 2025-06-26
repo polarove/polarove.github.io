@@ -19,7 +19,9 @@ jobs:
               uses: actions/setup-node@v4
               with:
                   node-version: 20
-
+            - name: Prepare environment
+              run: corepack enable pnpm
+              
             - name: Install dependencies
               run: pnpm i
 
