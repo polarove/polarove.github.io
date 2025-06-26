@@ -137,18 +137,18 @@
 							{{ $t('projects.total', { month: toMonth(new Date(project.since), new Date(project.until)) }) }}
 						</span>
 						<nuxt-link
-							class="block my-2 text-inherit decoration-none hover:color-[--primary] vertical-mid"
+							class="block text-inherit decoration-none hover:color-[--primary] vertical-mid"
 							:to="project.link"
 							target="_blank"
 						>
-							<span>{{ $t(project.companies) }}</span>
+							<span>{{ $t(project.name) }}</span>
 							<Icon name="mdi:arrow-top-right" />
 						</nuxt-link>
 					</div>
 					<span class="text-center">
 						{{ project.since }} - {{ project.until }}
 					</span>
-					<span class="text-end">
+					<span class="text-end py-1">
 						{{ $t(project.title) }}
 					</span>
 				</div>
