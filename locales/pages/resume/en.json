@@ -93,7 +93,8 @@
     "p3": "[Database] MySQL / Redis / SQLServer / MongoDB",
     "p4": "[ORM] EFCore / SQLSugar",
     "p5": "[Search] Elastic Search / Kibana",
-    "p6": "[Message] RabbitMQ & Masstransit"
+    "p6": "[Message] RabbitMQ & Masstransit",
+    "p7": "[Job] XxlJob"
   },
   "projects": {
     "index": "Projects",
