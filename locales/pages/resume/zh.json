@@ -56,12 +56,12 @@
             "detail": "愿意接受并评估新事物的可行性，不搞经验主义、教条主义，信奉实践出真知，没有调查就没有发言权。"
         },
         "p2": {
-            "brief": "经验 - 熟练构建流畅、稳定且SEO友好的 web apps",
-            "detail": "2年 Vue/Nuxt 前端开发经验。"
-        },
-        "p3": {
             "brief": "经验 - 熟练构建 RESTful api 相关服务",
             "detail": "2年 Java(8+) 后端开发经验，{experience} 年 .NET Core(8.0+) 后端开发经验。"
+        },
+        "p3": {
+            "brief": "经验 - 熟练构建流畅、稳定且SEO友好的 web apps",
+            "detail": "2年 Vue/Nuxt 前端开发经验。"
         },
         "p4": {
             "brief": "技术 - 熟练根据业务需要构建分布式系统",
