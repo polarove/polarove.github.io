@@ -69,13 +69,13 @@
 			<h2>{{ $t('abilities.p1.brief') }}</h2>
 			<p>{{ $t('abilities.p1.detail') }}</p>
 		</v-card>
-		<v-card class="mt-8 ma-auto xl:w-45vw md:w-67vw sm:w-82vw lt-sm:w-82vw p-4">
+		<v-card class="mt-4 ma-auto xl:w-45vw md:w-67vw sm:w-82vw lt-sm:w-82vw p-4">
 			<h2>{{ $t('abilities.p2.brief') }}</h2>
 			<p>{{ $t('abilities.p2.detail') }}</p>
 			<h2>{{ $t('abilities.p3.brief') }}</h2>
 			<p>{{ $t('abilities.p3.detail', { experience: toYear(constants.participate_in_dotnet) }) }}</p>
 		</v-card>
-		<v-card class="mt-8 ma-auto xl:w-45vw md:w-67vw sm:w-82vw lt-sm:w-82vw p-4">
+		<v-card class="mt-4 ma-auto xl:w-45vw md:w-67vw sm:w-82vw lt-sm:w-82vw p-4">
 			<h2>{{ $t('abilities.p4.brief') }}</h2>
 			<p>{{ $t('abilities.p4.detail') }}</p>
 			<h2>{{ $t('abilities.p5.brief') }}</h2>
@@ -89,7 +89,7 @@
 			<h2>{{ $t('abilities.p7.brief') }}</h2>
 			<p>{{ $t('abilities.p7.detail') }}</p>
 		</v-card>
-		<v-card class="mt-8 ma-auto xl:w-45vw md:w-67vw sm:w-82vw lt-sm:w-82vw p-4">
+		<v-card class="mt-4 ma-auto xl:w-45vw md:w-67vw sm:w-82vw lt-sm:w-82vw p-4">
 			<h2>{{ $t('abilities.p8.brief') }}</h2>
 			<p>{{ $t('abilities.p8.detail') }}</p>
 		</v-card>
