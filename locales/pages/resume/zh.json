@@ -25,8 +25,8 @@
     "email": {
         "value": "liuqi6602@163.com"
     },
-    "working": {
-        "time": "于 {year} 参加工作",
+    "career": {
+        "since": "于 {year} 参加工作",
         "value": "{value} 年"
     },
     "companies": {
@@ -52,12 +52,12 @@
             "detail": "大学期间有省级/国家级英语竞赛获奖经历各一次，能够使用英语作为工作语言。"
         },
         "p1": {
-            "brief": "自我评价 - 具备较强的学习能力",
+            "brief": "行为准则 - 在实践中去大胆探索，并细心求证",
             "detail": "愿意接受并评估新事物的可行性，不搞经验主义、教条主义，信奉实践出真知，没有调查就没有发言权。"
         },
         "p2": {
             "brief": "经验 - 熟练构建 RESTful api 相关服务",
-            "detail": "2年 Java(8+) 后端开发经验，{experience} 年 .NET Core(8.0+) 后端开发经验。"
+            "detail": "{experience} 年 .NET Core(8.0+) 后端开发经验，2年 Java(8+) 后端开发经验。"
         },
         "p3": {
             "brief": "经验 - 熟练构建流畅、稳定且SEO友好的 web apps",
