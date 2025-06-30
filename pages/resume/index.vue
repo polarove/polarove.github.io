@@ -12,8 +12,8 @@
 				<span class="mx-1">{{ $t('political.value') }}</span>
 			</p>
 			<p class="text-center">
-				<span class="mx-1">{{ $t('working.time', { year: '2023-07' }) }}</span>/
-				<span class="mx-1">{{ $t('working.value', { value: toYear(constants.participate_in_work) }) }}</span>/
+				<span class="mx-1">{{ $t('career.since', { year: '2023-07' }) }}</span>/
+				<span class="mx-1">{{ $t('career.value', { value: toYear(constants.participate_in_work) }) }}</span>/
 				<span class="mx-1">{{ $t('field.value', { value: toYear(constants.participate_in_work) }) }}</span>
 			</p>
 			<p class="text-center">
@@ -71,9 +71,9 @@
 		</v-card>
 		<v-card class="mt-4 ma-auto xl:w-45vw md:w-67vw sm:w-82vw lt-sm:w-82vw p-4">
 			<h2>{{ $t('abilities.p2.brief') }}</h2>
-			<p>{{ $t('abilities.p2.detail') }}</p>
+			<p>{{ $t('abilities.p2.detail', { experience: toYear(constants.participate_in_dotnet) }) }}</p>
 			<h2>{{ $t('abilities.p3.brief') }}</h2>
-			<p>{{ $t('abilities.p3.detail', { experience: toYear(constants.participate_in_dotnet) }) }}</p>
+			<p>{{ $t('abilities.p3.detail') }}</p>
 		</v-card>
 		<v-card class="mt-4 ma-auto xl:w-45vw md:w-67vw sm:w-82vw lt-sm:w-82vw p-4">
 			<h2>{{ $t('abilities.p4.brief') }}</h2>
@@ -96,18 +96,14 @@
 		<v-card class="mt-8 ma-auto xl:w-45vw md:w-67vw sm:w-82vw lt-sm:w-82vw p-4">
 			<h1>{{ $t('frameworks.index') }}</h1>
 			<h3>{{ $t('frameworks.subtitle') }}</h3>
-			<p
-				class="flex items-center text-[--primary]"
-			>
+			<p class="flex items-center text-[--primary]">
 				<Icon
 					name="mdi:star"
 					class="text-2xl color-orange mr-1"
 				/>
 				<span>{{ $t('frameworks.p0') }}</span>
 			</p>
-			<p
-				class="flex items-center text-[--primary]"
-			>
+			<p class="flex items-center text-[--primary]">
 				<Icon
 					name="mdi:star"
 					class="text-2xl color-orange mr-1"
@@ -135,9 +131,7 @@
 							name="mdi:star"
 							class="text-2xl vertical-mid color-orange mr-1"
 						/>
-						<span
-							class="text-center vertical-mid text-lg"
-						>
+						<span class="text-center vertical-mid text-lg">
 							{{ $t('projects.total', { month: toMonth(new Date(project.since), new Date(project.until)) }) }}
 						</span>
 						<nuxt-link
@@ -173,9 +167,7 @@
 							name="mdi:star"
 							class="text-2xl vertical-mid color-orange mr-1"
 						/>
-						<span
-							class="text-center vertical-mid text-lg"
-						>
+						<span class="text-center vertical-mid text-lg">
 							{{ $t('companies.total', { year: toYear(new Date(career.since), new Date(career.until)) }) }}
 						</span>
 						<nuxt-link
@@ -209,23 +201,23 @@ useSeoMeta({
 const constants = {
 	birthday: new Date('2001-11-16'),
 	participate_in_work: new Date('2023-07-01'),
-	participate_in_dotnet: new Date('2024-11-16')
+	participate_in_dotnet: new Date('2024-08-01')
 }
 
 // 实现
 function toYear(since: Date, until?: Date): string {
-	const totalMonths = calculateMonthGap(since, until)
+	const totalMonths = toMonthGap(since, until)
 	const yearDiff = totalMonths / 12
 	return yearDiff.toFixed(1) // 保留 1 位小数
 }
 
 // 实现
 function toMonth(since: Date, until?: Date): string {
-	return calculateMonthGap(since, until).toString()
+	return toMonthGap(since, until).toString()
 }
 
 // 实现
-function calculateMonthGap(since: Date, until?: Date) {
+function toMonthGap(since: Date, until?: Date) {
 	if (until === undefined) {
 		until = new Date() // 使用当前日期作为参考
 	}
