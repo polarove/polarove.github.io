@@ -236,7 +236,7 @@ const careers = [
 		link: 'https://gtesim.cn',
 		incumbency: true,
 		position: 'companies.p2.position',
-		since: '2024/08	',
+		since: '2024/08',
 		until: new Date().toLocaleDateString()
 	},
 	{
@@ -285,10 +285,19 @@ const projects = [
 		name: 'projects.p0.name',
 		title: 'projects.p0.title',
 		companies: 'projects.p0.companies',
-		since: '2024/08',
+		since: '2025/07',
 		until: new Date().toLocaleDateString(),
-		link: '_blank',
+		link: 'https://www.gtesim.com',
 		incumbency: true
+	},
+	{
+		name: 'projects.p1.name',
+		title: 'projects.p1.title',
+		companies: 'projects.p1.companies',
+		since: '2024/08',
+		until: '2025/07',
+		link: 'https://gt-admin.gtesim.cn',
+		incumbency: false
 	},
 	{
 		name: 'projects.p2.name',
@@ -300,9 +309,9 @@ const projects = [
 		incumbency: false
 	},
 	{
-		name: 'projects.p1.name',
-		title: 'projects.p1.title',
-		companies: 'projects.p1.companies',
+		name: 'projects.p3.name',
+		title: 'projects.p3.title',
+		companies: 'projects.p3.companies',
 		since: '2023/11',
 		until: '2024/04',
 		link: 'https://gtesim.cn',

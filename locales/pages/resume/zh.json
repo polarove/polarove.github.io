@@ -77,7 +77,7 @@
         },
         "p7": {
             "brief": "技术 - 容器技术在我参与的项目中广泛使用",
-            "detail": "掌握基本的容器知识与理念，能够根据业务需要编写 Dockerfile 和 docker-compose.yaml 进行容器的编排与管理。"
+            "detail": "掌握基本的容器知识与理念，能够根据业务需要编写 Dockerfile 和 docker-compose.yaml 进行容器的编排与管理。会用Portainer。"
         },
         "p8": {
             "brief": "爱好 - 睡好觉",
@@ -99,18 +99,27 @@
     "projects": {
         "index": "项目经历",
         "p0": {
-            "name": "图鲲GT平台",
-            "title": "初级.Net开发工程师",
+            "name": "shopify 电商开发",
+            "title": "中级.Net开发工程师",
+            "desc": "",
             "companies": "福州图鲲科技有限公司"
         },
         "p1": {
-            "name": "图鲲科技官网",
-            "title": "主设计师 & 开发",
+            "name": "图鲲GT平台",
+            "title": "初级.Net开发工程师",
+            "desc": "",
             "companies": "福州图鲲科技有限公司"
         },
         "p2": {
             "name": "GTeSIM 兑换页面",
             "title": "主设计师 & 开发",
+            "desc": "",
+            "companies": "福州图鲲科技有限公司"
+        },
+        "p3": {
+            "name": "图鲲科技官网",
+            "title": "主设计师 & 开发",
+            "desc": "",
             "companies": "福州图鲲科技有限公司"
         },
         "total": "{month} 个月"

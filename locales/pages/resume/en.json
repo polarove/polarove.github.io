@@ -77,7 +77,7 @@
     },
     "p7": {
       "brief": "Tech - Containers are widely applied across my projects",
-      "detail": "Possess relevant knowledge of containers, and being able to write Dockerfiles and Docker-compose.yaml according to requirements to manage containers."
+      "detail": "Possess relevant knowledge of containers, and being able to write Dockerfiles and Docker-compose.yaml according to requirements to manage containers. Knows Portainer."
     },
     "p8": {
       "brief": "Hobby - Sleep",
@@ -100,17 +100,26 @@
     "index": "Projects",
     "p0": {
       "name": "Tukun GT",
-      "title": "Junior .Net developer",
+      "title": "Intermediate .NET developer",
+      "desc": "Leader in a sub project of Tukun GT, assigned to build a software that connects shopify store and Tukun GT platform which enriches the business as a new sale channel.",
       "companies": "Tukun Technology Co., Ltd, Fuzhou"
     },
     "p1": {
-      "name": "Official site",
-      "title": "Leader & Developer",
+      "name": "Tukun GT",
+      "title": "Junior .NET developer",
+      "desc": "",
       "companies": "Tukun Technology Co., Ltd, Fuzhou"
     },
     "p2": {
       "name": "GTeSIM redeem",
       "title": "Leader & Developer",
+      "desc": "",
+      "companies": "Tukun Technology Co., Ltd, Fuzhou"
+    },
+    "p3": {
+      "name": "Official site",
+      "title": "Leader & Developer",
+      "desc": "",
       "companies": "Tukun Technology Co., Ltd, Fuzhou"
     },
     "total": "{month} months"
