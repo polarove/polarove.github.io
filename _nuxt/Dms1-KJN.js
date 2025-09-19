@@ -1,0 +1,1 @@
+import{p as o,f as n,o as s,Q as t}from"#entry";const a={},c={class:"bg-[--background-card] rounded-2 shadow-md b-1 b-[--background-page] b-solid position-relative"};function r(e,_){return s(),n("section",c,[t(e.$slots,"default")])}const i=Object.assign(o(a,[["render",r]]),{__name:"VCard"});export{i as _};
