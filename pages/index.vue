@@ -14,7 +14,7 @@
 			<v-locale />
 		</div>
 		<h1 class="text-center my-12">
-			{{ $t('welcome', { name: $t('name') as string }) }}
+			{{ ts('welcome', { name: ts('name') as string }) }}
 		</h1>
 		<v-route
 			:routes="routes"
@@ -38,7 +38,7 @@
 				<i18n-link
 					v-if="prop.index === mbti"
 					class="decoration-none color-inherit hover:color-$primary"
-					:aria-label="$t(prop.route.translateKey)"
+					:aria-label="ts(prop.route.translateKey)"
 					active-class="color-$primary!"
 					:to="prop.route.path"
 					:prefetch="true"
@@ -76,9 +76,9 @@
 									? 'transition-delay: 67ms'
 									: 'transition-delay: 0ms'
 							]"
-							class="mt-1 xl:text-size-$text-xl lg:text-size-$text-lg md:text-size-$text-md sm:text-size-$text-sm lt-sm:text-size-$text-lt-sm"
+							class="mt-1 xl:text-size-tsext-xl lg:text-size-tsext-lg md:text-size-tsext-md sm:text-size-tsext-sm lt-sm:text-size-tsext-lt-sm"
 						>
-							{{ $t(prop.route.translateKey) }}
+							{{ ts(prop.route.translateKey) }}
 						</div>
 					</transition>
 				</i18n-link>
@@ -143,11 +143,10 @@ const routes = reactive([
 
 const handleClick = (index: number) => {
 	visible.value = false
-
 	function toggle() {
-		if (routes[index].translateKey === ex[0])
-			routes[index].translateKey = ex[1]
-		else routes[index].translateKey = ex[0]
+		if (routes[index]!.translateKey === ex[0])
+			routes[index]!.translateKey = ex[1]
+		else routes[index]!.translateKey = ex[0]
 		visible.value = true
 	}
 
